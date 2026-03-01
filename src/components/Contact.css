@@ -75,13 +75,32 @@
 }
 
 @media (max-width: 768px) {
+    .contact-cta-section {
+        padding: 60px 20px;
+    }
+
     .cta-wrapper {
         flex-direction: column;
         align-items: flex-start;
-        gap: 40px;
+        gap: 30px;
     }
 
     .cta-content h2 {
         font-size: 2.5rem;
+    }
+
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }

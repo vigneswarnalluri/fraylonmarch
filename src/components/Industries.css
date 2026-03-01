@@ -312,11 +312,9 @@
     }
 
     .ind-list-col {
-        display: none;
-        /* For now hide list or stack it? */
+        display: flex;
+        /* DO NOT HIDE ON MOBILE */
     }
-
-    /* Just handling a basic responsive case. The user asked for "fit to screen" before so sticking to desktop focus first. */
 }
 
 @media (max-width: 1024px) {
@@ -337,5 +335,32 @@
     .ind-list-col {
         display: flex;
         order: 3;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .ind-nav-item {
+        padding: 20px 4vw;
+        border-bottom: 1px solid #1f2937;
+    }
+
+    .ind-title {
+        font-size: 2.5rem;
+        padding: 40px 4vw 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .ind-title {
+        font-size: 2rem;
+    }
+
+    .ind-desc {
+        padding: 20px 4vw;
+        font-size: 1rem;
+    }
+
+    .ind-image-col {
+        height: 300px;
     }
 }

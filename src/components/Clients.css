@@ -53,3 +53,13 @@
         transform: translateX(-50%);
     }
 }
+
+@media (max-width: 768px) {
+    .marquee-content {
+        gap: 60px;
+    }
+
+    .client-logo {
+        height: 20px;
+    }
+}

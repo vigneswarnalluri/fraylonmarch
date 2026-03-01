@@ -935,3 +935,44 @@
 .view-all-projects-btn:hover svg {
     transform: translateX(5px);
 }
+
+/* --- MASTER MOBILE RESPONSIVENESS OVERRIDES --- */
+@media (max-width: 768px) {
+    .sd-hero {
+        padding: 100px 20px 40px;
+        min-height: auto;
+    }
+
+    .sd-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .sd-content-container {
+        padding: 60px 20px;
+    }
+
+    .features-grid,
+    .process-timeline,
+    .benefit-grid,
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Hide the horizontal connector line on mobile */
+    .process-timeline::before {
+        display: none;
+    }
+
+    .process-step {
+        margin-bottom: 20px;
+    }
+
+    .faq-item {
+        padding: 20px 0;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+}

@@ -206,10 +206,20 @@
 }
 
 @media (max-width: 768px) {
+    .services-section {
+        padding-top: 60px;
+        margin-bottom: 60px;
+    }
+
     .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 
     .section-desc {
@@ -218,5 +228,10 @@
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 40px 20px;
+        min-height: auto;
     }
 }

@@ -214,6 +214,10 @@
 }
 
 @media (max-width: 768px) {
+    .footer {
+        padding: 60px 20px 30px;
+    }
+
     .footer-top {
         grid-template-columns: 1fr;
         gap: 40px;

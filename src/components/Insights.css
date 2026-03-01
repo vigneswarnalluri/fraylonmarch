@@ -221,3 +221,23 @@
         min-height: 400px;
     }
 }
+
+@media (max-width: 768px) {
+    .insights-section {
+        padding: 80px 20px;
+    }
+
+    .insights-section .insights-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .insights-title {
+        font-size: 2.5rem;
+    }
+
+    .insights-header p {
+        font-size: 1rem;
+    }
+}

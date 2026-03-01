@@ -107,3 +107,26 @@
         margin-top: 40px;
     }
 }
+
+@media (max-width: 768px) {
+    .careers-section {
+        padding: 80px 20px;
+    }
+
+    .career-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .career-content p {
+        font-size: 1rem;
+    }
+
+    .culture-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .career-visuals {
+        height: 300px;
+    }
+}
