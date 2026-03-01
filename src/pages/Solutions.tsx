@@ -228,8 +228,8 @@ const Solutions = () => {
                                     );
                                 }
 
-                                const TechIcon = mapEntry ? mapEntry.icon : FaCertificate;
-                                const iconColor = mapEntry ? mapEntry.color : '#fff';
+                                const TechIcon = mapEntry?.icon || FaCertificate;
+                                const iconColor = mapEntry?.color || '#fff';
 
                                 return (
                                     <span key={i} className="tech-tag">
