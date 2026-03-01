@@ -342,6 +342,11 @@
     font-size: 1.5rem;
     color: var(--text-main);
     z-index: 1100;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
 }
 
 /* --- MOBILE / RESPONSIVE FIX --- */
@@ -373,6 +378,52 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 2100;
+        /* Must be higher than overlay's 2000 */
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        width: 45px;
+        height: 45px;
+    }
+
+    .burger-lines {
+        width: 24px;
+        height: 18px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .burger-lines span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--text-main);
+        border-radius: 2px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        transform-origin: left center;
+    }
+
+    /* Open State */
+    .hamburger-btn.open .burger-lines span:nth-child(1) {
+        transform: rotate(45deg);
+        width: 26px;
+        background-color: #fff;
+    }
+
+    .hamburger-btn.open .burger-lines span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    .hamburger-btn.open .burger-lines span:nth-child(3) {
+        transform: rotate(-45deg);
+        width: 26px;
+        background-color: #fff;
     }
 
     /* Mobile Menu Overlay */
