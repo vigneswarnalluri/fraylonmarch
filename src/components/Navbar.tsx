@@ -11,7 +11,7 @@ import {
   FaChartLine, FaStore, FaHeartbeat, FaDna, FaPlane, FaIndustry, FaCar, FaBolt,
   FaFlask, FaBroadcastTower, FaFilm, FaMicrochip, FaLandmark, FaComment,
   FaInfoCircle, FaUserTie, FaHandshake, FaNewspaper,
-  FaBars, FaTimes, FaChevronDown, FaChevronRight, FaLinkedin, FaFacebook, FaInstagram, FaPlus, FaMinus, FaChevronLeft
+  FaChevronRight, FaLinkedin, FaFacebook, FaInstagram, FaPlus, FaMinus, FaChevronLeft
 } from 'react-icons/fa';
 import { SiWebflow, SiFramer, SiSap, SiOracle } from 'react-icons/si';
 import './Navbar.css';
@@ -30,6 +30,17 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const handleMouseEnter = (menu: string) => {
     if (window.innerWidth > 991) {
@@ -303,8 +314,16 @@ const Navbar = () => {
 
       <div className="nav-actions">
         <Link to="/contact" className="desktop-only"><button className="nav-cta">Contact Us</button></Link>
-        <button className="hamburger-btn" onClick={toggleMobileMenu}>
-          {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+        <button
+          className={`hamburger-btn ${mobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
+        >
+          <div className="burger-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
       </div>
 
@@ -327,13 +346,10 @@ const Navbar = () => {
                 <div style={{ width: '20px' }}></div>
               )}
               <div className="mobile-topbar-right">
-                <div className="mobile-lang-selector">
-                  <FaGlobe style={{ marginRight: '6px' }} /> India <FaChevronDown style={{ fontSize: '0.7em', marginLeft: '6px' }} />
-                </div>
-                <div className="topbar-divider"></div>
-                <button className="mobile-close-btn" onClick={closeMenu}>
-                  <FaTimes />
-                </button>
+                {/* 
+                 Close button logic has been entirely merged into the main navbar 
+                 so that it rests above the overlay with z-index.
+                 */}
               </div>
             </div>
 
@@ -356,7 +372,7 @@ const Navbar = () => {
                     </div>
                     <div className="mobile-accordion">
                       <div className="mobile-accordion-header" onClick={() => setMobileActivePanel('solutions')}>
-                        <span>What we think</span>
+                        <span>Solutions & Industries</span>
                         <FaChevronRight className="mobile-chevron" />
                       </div>
                     </div>
@@ -365,6 +381,12 @@ const Navbar = () => {
                         <span>Who we are</span>
                         <FaChevronRight className="mobile-chevron" />
                       </div>
+                    </div>
+                    <div className="mobile-accordion">
+                      <Link to="/insights" className="mobile-accordion-header" style={{ textDecoration: 'none' }} onClick={closeMenu}>
+                        <span>Insights</span>
+                        <FaChevronRight className="mobile-chevron" />
+                      </Link>
                     </div>
                     <div className="mobile-accordion">
                       <Link to="/careers" className="mobile-accordion-header" style={{ textDecoration: 'none' }} onClick={closeMenu}>
@@ -410,20 +432,47 @@ const Navbar = () => {
                         { to: '/services/webflow', label: 'Webflow Development' },
                         { to: '/services/wix', label: 'Wix Development' },
                         { to: '/services/shopify', label: 'Shopify Development' },
-                        { to: '/services/framer', label: 'Framer Development' }
+                        { to: '/services/magento', label: 'Magento Development' },
+                        { to: '/services/bubble', label: 'Bubble.io Development' },
+                        { to: '/services/framer', label: 'Framer Development' },
+                        { to: '/services/dora', label: 'Dora Development' },
+                        { to: '/services/studio-ai', label: 'Studio AI Development' }
                       ])}
                       {renderSubAccordion('custom', 'Custom Development', [
                         { to: '/services/software-dev', label: 'Software Development' },
                         { to: '/services/web-app-dev', label: 'Web Application Development' },
+                        { to: '/services/custom-cms', label: 'Custom Website & CMS' },
+                        { to: '/services/portals', label: 'Enterprise Portals & Dashboard' },
                         { to: '/services/ecommerce', label: 'eCommerce Website Dev' }
+                      ])}
+                      {renderSubAccordion('itsolutions', 'IT Solutions', [
+                        { to: '/services/digital-transformation', label: 'Digital Transformation' },
+                        { to: '/services/staff-augmentation', label: 'IT Staff Augmentation' },
+                        { to: '/services/tech-consulting', label: 'Technology Consulting' },
+                        { to: '/services/maintenance', label: 'Maintenance & Support' }
                       ])}
                       {renderSubAccordion('ai', 'AI & Data Science', [
                         { to: '/services/ai-integration', label: 'AI Integration & Strategy' },
-                        { to: '/services/ai-agents', label: 'AI Agents Development' }
+                        { to: '/services/ai-agents', label: 'AI Agents Development' },
+                        { to: '/services/nlp', label: 'Natural Language Processing' }
                       ])}
                       {renderSubAccordion('design', 'Design Services', [
                         { to: '/services/ui-ux', label: 'UI/UX & Product Design' },
-                        { to: '/services/branding', label: 'Branding & Visual Identity' }
+                        { to: '/services/branding', label: 'Branding & Visual Identity' },
+                        { to: '/services/graphic-design', label: 'Graphic Design' }
+                      ])}
+                      {renderSubAccordion('mobile', 'Mobile App Development', [
+                        { to: '/services/native-app', label: 'Native Mobile App' },
+                        { to: '/services/hybrid-app', label: 'Hybrid Mobile App' }
+                      ])}
+                      {renderSubAccordion('marketing', 'Marketing Services', [
+                        { to: '/services/inbound-marketing', label: 'Inbound Marketing' },
+                        { to: '/services/seo', label: 'SEO Services' },
+                        { to: '/services/social-media', label: 'Social Media & Paid Ads' }
+                      ])}
+                      {renderSubAccordion('zero', 'Zero To One', [
+                        { to: '/services/mvp-development', label: 'MVP Development' },
+                        { to: '/services/prototyping', label: 'Rapid Prototyping' }
                       ])}
                     </div>
                   </motion.div>
@@ -448,15 +497,50 @@ const Navbar = () => {
                       {renderSubAccordion('core', 'Core Solutions', [
                         { to: '/solutions/cloud', label: 'Cloud Transformation' },
                         { to: '/solutions/data', label: 'Data & Analytics' },
-                        { to: '/solutions/ai', label: 'Artificial Intelligence' }
+                        { to: '/solutions/ai', label: 'Artificial Intelligence' },
+                        { to: '/solutions/automation', label: 'Intelligent Automation' }
                       ])}
+                      {renderSubAccordion('enterprise', 'Enterprise', [
+                        { to: '/solutions/sap', label: 'SAP S/4HANA' },
+                        { to: '/solutions/oracle', label: 'Oracle Cloud' },
+                        { to: '/solutions/supply-chain', label: 'Smart Supply Chain' },
+                        { to: '/solutions/hr', label: 'HR Transformation' }
+                      ])}
+                      {renderSubAccordion('security', 'Security & Infra', [
+                        { to: '/solutions/cyber', label: 'Cybersecurity' },
+                        { to: '/solutions/network', label: 'Network Modernization' },
+                        { to: '/solutions/cloud-sec', label: 'Cloud Security' },
+                        { to: '/solutions/grc', label: 'Governance & Risk' }
+                      ])}
+
+                      <div style={{ marginTop: '30px', marginBottom: '10px', paddingLeft: '10px' }}>
+                        <h3 style={{ color: '#fff', fontSize: '1.4rem', fontWeight: 700 }}>Industries</h3>
+                        <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginTop: '5px' }}>Tailored solutions for your sector.</p>
+                      </div>
+
                       {renderSubAccordion('ind1', 'Financial Services', [
                         { to: '/ind/banking', label: 'Banking & Capital Markets' },
-                        { to: '/ind/insurance', label: 'Insurance' }
+                        { to: '/ind/insurance', label: 'Insurance' },
+                        { to: '/ind/payments', label: 'Payments & Fintech' },
+                        { to: '/ind/wealth', label: 'Wealth Management' }
                       ])}
                       {renderSubAccordion('ind2', 'Consumer & Health', [
                         { to: '/ind/retail', label: 'Retail & Consumer Goods' },
-                        { to: '/ind/health', label: 'Healthcare Payers' }
+                        { to: '/ind/health', label: 'Healthcare Payers' },
+                        { to: '/ind/life-sci', label: 'Life Sciences' },
+                        { to: '/ind/travel', label: 'Travel, Transport & Logistics' }
+                      ])}
+                      {renderSubAccordion('ind3', 'Industrial & Energy', [
+                        { to: '/ind/manufacturing', label: 'Industrial Manufacturing' },
+                        { to: '/ind/auto', label: 'Automotive' },
+                        { to: '/ind/energy', label: 'Energy, Resources & Utilities' },
+                        { to: '/ind/chem', label: 'Chemicals & Agriculture' }
+                      ])}
+                      {renderSubAccordion('ind4', 'TMT & Public', [
+                        { to: '/ind/telecom', label: 'Telecommunications' },
+                        { to: '/ind/media', label: 'Media & Entertainment' },
+                        { to: '/ind/hitech', label: 'High Tech & Semiconductors' },
+                        { to: '/ind/public', label: 'Public Sector & Education' }
                       ])}
                     </div>
                   </motion.div>
