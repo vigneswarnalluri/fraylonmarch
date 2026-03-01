@@ -231,13 +231,29 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+        margin-bottom: 30px;
     }
 
-    .insights-title {
-        font-size: 2.5rem;
+    .insights-section .section-title {
+        font-size: 2.2rem;
     }
 
     .insights-header p {
         font-size: 1rem;
+    }
+
+    .insight-large h3 {
+        font-size: 1.7rem;
+    }
+
+    .insight-tall h3,
+    .insight-small h3 {
+        font-size: 1.3rem;
+    }
+
+    .insight-content-overlay,
+    .insight-content-overlay-small {
+        padding: 24px;
+        padding-top: 60px;
     }
 }

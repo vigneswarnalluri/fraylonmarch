@@ -205,17 +205,21 @@
 }
 
 @media (max-width: 900px) {
-    .global-split {
+    .impact-section .section-header {
         flex-direction: column;
-        gap: 60px;
+        align-items: flex-start;
+        gap: 20px;
     }
 
-    .global-content {
-        padding-right: 0;
+    .impact-section .section-desc {
+        text-align: left;
     }
 
     .map-container {
-        height: 400px;
+        height: auto;
+        min-height: auto;
+        /* Fix for absolute dot scaling */
+        margin-top: 20px;
     }
 
     .impact-stat-card {
@@ -226,33 +230,70 @@
 }
 
 @media (max-width: 768px) {
-    .global-section {
-        padding: 80px 20px;
+    .impact-section {
+        padding: 50px 0;
     }
 
-    .global-content h2 {
-        font-size: 2.5rem;
+    /* Reduced padding so the title fits on screen with the map */
+
+    .impact-container-full {
+        padding: 0 20px !important;
     }
 
-    .global-content p {
-        font-size: 1.1rem;
+    .impact-section .section-title {
+        font-size: 2.2rem;
+    }
+
+    .impact-section .section-desc {
+        font-size: 1rem;
     }
 
     .map-container {
-        height: 300px;
+        height: auto;
+        min-height: auto;
+        /* Allow dots to scale naturally */
+    }
+
+    .map-aspect-container {
+        height: auto;
     }
 
     .impact-stat-card {
         padding: 20px;
+        width: 100%;
+        text-align: center;
     }
 
     .impact-stat-card h4 {
         font-size: 2.5rem;
     }
 
-    /* Disable exact fixed map pins gracefully on mobile if container is too small */
-    .pin-pulse {
-        width: 15px;
-        height: 15px;
+    .map-point {
+        width: 4px;
+        height: 4px;
+    }
+
+    .map-point::after {
+        animation: ripple-mobile 2s infinite;
+    }
+
+    .map-point .tooltip {
+        font-size: 13px;
+        padding: 4px 8px;
+        bottom: 8px;
+    }
+}
+
+@keyframes ripple-mobile {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 16px;
+        height: 16px;
+        opacity: 0;
     }
 }

@@ -159,3 +159,36 @@ h6 {
   background: var(--color-primary);
   color: #fff;
 }
+
+/* Cookie Banner Mobile Overrides */
+@media (max-width: 768px) {
+  .cookie-banner-container {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
+  }
+
+  .cookie-banner-actions {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .cookie-banner-actions button {
+    width: 100% !important;
+  }
+
+  .cookie-settings-modal {
+    padding: 20px !important;
+  }
+
+  .cookie-settings-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .cookie-settings-actions button {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+}

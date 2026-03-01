@@ -17,33 +17,35 @@ const GlobalImpact = () => {
 
                 <div className="map-container">
                     <div className="map-aspect-container">
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg"
-                            alt="World Map"
-                            className="world-map-img"
-                        />
+                        <div className="map-and-dots-wrapper" style={{ position: 'relative', width: '100%' }}>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg"
+                                alt="World Map"
+                                className="world-map-img"
+                            />
 
-                        {/* Map Dots */}
-                        <div className="map-dots-layer">
-                            {[
-                                { id: 'ny', name: 'New York, USA' },
-                                { id: 'ldn', name: 'London, UK' },
-                                { id: 'sg', name: 'Singapore' },
-                                { id: 'tk', name: 'Tokyo, Japan' },
-                                { id: 'dxb', name: 'Dubai, UAE' },
-                                { id: 'syd', name: 'Sydney, Australia' },
-                                { id: 'mum', name: 'Mumbai, India' }
-                            ].map((loc, i) => (
-                                <motion.div
-                                    key={loc.id}
-                                    className={`map-point loc-${loc.id}`}
-                                    initial={{ scale: 0 }}
-                                    whileInView={{ scale: 1 }}
-                                    transition={{ delay: i * 0.1 }}
-                                >
-                                    <span className="tooltip">{loc.name}</span>
-                                </motion.div>
-                            ))}
+                            {/* Map Dots */}
+                            <div className="map-dots-layer">
+                                {[
+                                    { id: 'ny', name: 'New York, USA' },
+                                    { id: 'ldn', name: 'London, UK' },
+                                    { id: 'sg', name: 'Singapore' },
+                                    { id: 'tk', name: 'Tokyo, Japan' },
+                                    { id: 'dxb', name: 'Dubai, UAE' },
+                                    { id: 'syd', name: 'Sydney, Australia' },
+                                    { id: 'mum', name: 'Mumbai, India' }
+                                ].map((loc, i) => (
+                                    <motion.div
+                                        key={loc.id}
+                                        className={`map-point loc-${loc.id}`}
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: i * 0.1 }}
+                                    >
+                                        <span className="tooltip">{loc.name}</span>
+                                    </motion.div>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="impact-stat-card">

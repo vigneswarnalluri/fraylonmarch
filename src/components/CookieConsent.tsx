@@ -114,7 +114,7 @@ const CookieConsent: React.FC = () => {
               }}
               className="cookie-banner-full"
             >
-              <div className="container" style={{
+              <div className="container cookie-banner-container" style={{
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
@@ -143,7 +143,7 @@ const CookieConsent: React.FC = () => {
                   </p>
                 </div>
 
-                <div style={{
+                <div className="cookie-banner-actions" style={{
                   display: 'flex',
                   gap: '16px',
                   flexWrap: 'wrap',
@@ -230,6 +230,7 @@ const CookieConsent: React.FC = () => {
               }}
             >
               <motion.div
+                className="cookie-settings-modal"
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
@@ -342,7 +343,7 @@ const CookieConsent: React.FC = () => {
 
                 </div>
 
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'flex-end', paddingTop: '24px', borderTop: '1px solid var(--border-light)' }}>
+                <div className="cookie-settings-actions" style={{ display: 'flex', gap: '16px', justifyContent: 'flex-end', paddingTop: '24px', borderTop: '1px solid var(--border-light)' }}>
                   <button
                     onClick={handleAcceptAll}
                     style={{
