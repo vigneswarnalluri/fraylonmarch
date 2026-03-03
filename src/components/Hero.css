@@ -67,7 +67,8 @@
 .hero-headline {
     font-family: 'Inter', sans-serif;
     font-size: clamp(2.5rem, 4vw, 4rem);
-    line-height: 1.1;
+    line-height: 1.35;
+    /* Increased for better visual breathing room */
     font-weight: 700;
     color: var(--text-main);
     margin-bottom: 1.5rem;
@@ -283,7 +284,7 @@
 
     .hero-headline {
         font-size: 2.5rem;
-        /* Explicit smaller size */
+        line-height: 1.35;
     }
 
     .hero-lead-text {

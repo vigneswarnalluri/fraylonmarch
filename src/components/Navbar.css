@@ -68,10 +68,7 @@
 
 .nav-link:hover,
 .nav-item:hover .nav-link {
-    color: var(--text-main);
     text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-color: var(--color-primary);
 }
 
 .nav-cta {
@@ -139,10 +136,7 @@
 /* Fallback/Original Link Hover style (Keep this for the link text itself) */
 .nav-link:hover,
 .nav-item:hover .nav-link {
-    color: var(--text-main);
     text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-color: var(--color-primary);
 }
 
 .mega-content-grid {
@@ -189,10 +183,7 @@
 }
 
 .mega-col a:hover {
-    color: var(--text-main);
     text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-color: var(--color-primary);
 }
 
 /* Introduction/Featured Area (Right Side) */

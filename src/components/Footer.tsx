@@ -93,10 +93,10 @@ const Footer = () => {
                     <p>&copy; {currentYear} Fraylon Technologies. All rights reserved.</p>
                 </div>
                 <div className="footer-bottom-links">
-                    <a href="#" className="footer-bottom-link">Privacy Policy</a>
-                    <a href="#" className="footer-bottom-link">Terms of Use</a>
-                    <a href="#" className="footer-bottom-link">Sitemap</a>
-                    <a href="#" className="footer-bottom-link">Cookie Settings</a>
+                    <Link to="/privacy-policy" className="footer-bottom-link">Privacy Policy</Link>
+                    <Link to="/terms-of-use" className="footer-bottom-link">Terms of Use</Link>
+                    <Link to="/sitemap" className="footer-bottom-link">Sitemap</Link>
+                    <Link to="/cookie-settings" className="footer-bottom-link">Cookie Settings</Link>
                 </div>
             </div>
         </footer>

@@ -23,6 +23,11 @@
     max-width: 100%;
 }
 
+/* Hide Mobile Bento Wrapper on Desktop */
+.mobile-bento-wrapper {
+    display: none;
+}
+
 /* Left Column: Image */
 .ind-image-col {
     position: relative;
@@ -295,6 +300,11 @@
     opacity: 0.8;
 }
 
+/* Base state for mobile controls */
+.mobile-ind-slider-controls {
+    display: none;
+}
+
 /* Responsive */
 @media (max-width: 1400px) {
     .industries-wrapper {
@@ -319,8 +329,7 @@
 
 @media (max-width: 1024px) {
     .industries-section {
-        height: auto;
-        padding: 0;
+        display: none !important;
     }
 
     .industries-wrapper {
@@ -328,25 +337,158 @@
         flex-direction: column;
     }
 
-    .ind-image-col {
-        height: 400px;
-    }
-
+    /* Completely hide the static list column on mobile */
     .ind-list-col {
-        display: flex;
-        order: 3;
-        flex-direction: column;
-        padding-bottom: 60px;
+        display: none;
     }
 
-    .ind-nav-item {
-        padding: 20px 4vw;
-        border-bottom: 1px solid #1f2937;
+    .ind-image-col {
+        height: 480px;
+        order: 1;
+        position: relative;
+    }
+
+    /* Magic Bento Layout applied for Mobile (Hidden on Desktop) */
+    .mobile-bento-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px 0;
+        background: #f8fafc;
+        order: -1;
+    }
+
+    .mobile-bento-header h3 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 20px;
+    }
+
+    .mobile-bento-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+
+    .bento-item {
+        position: relative;
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .bento-square {
+        grid-column: span 2;
+        aspect-ratio: 1 / 1;
+    }
+
+    .bento-large {
+        grid-column: span 4;
+        aspect-ratio: 2.2 / 1;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .bento-large .bento-icon {
+        font-size: 2.5rem;
+    }
+
+    .bento-large .bento-title {
+        font-size: 1.25rem;
+    }
+
+    .bento-wide {
+        grid-column: span 4;
+        aspect-ratio: 3.5 / 1;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 20px 24px;
+        gap: 16px;
+    }
+
+    .bento-tall {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .bento-item:hover,
+    .bento-item.active {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-color: var(--color-primary);
+        transform: translateY(-2px);
+    }
+
+    .bento-item.active {
+        background: #0f172a;
+        color: #fff;
+    }
+
+    .bento-icon {
+        font-size: 2rem;
+        color: #64748b;
+        margin-bottom: 8px;
+        transition: color 0.3s ease;
+        z-index: 2;
+    }
+
+    .bento-wide .bento-icon,
+    .bento-large .bento-icon {
+        margin-bottom: 0;
+    }
+
+    .bento-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #334155;
+        z-index: 2;
+    }
+
+    .bento-item.active .bento-icon {
+        color: #00c6a5;
+    }
+
+    .bento-item.active .bento-title {
+        color: #fff;
+    }
+
+    .bento-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 50% -20%, rgba(0, 198, 165, 0.15), transparent 60%);
+        opacity: 0;
+        transition: opacity 0.4s;
+        z-index: 1;
+    }
+
+    .bento-item.active .bento-glow {
+        opacity: 1;
+    }
+
+
+    .ind-content-col {
+        order: 2;
+        padding-top: 40px;
+        padding-bottom: 60px;
     }
 
     .ind-title {
         font-size: 2.5rem;
-        padding: 40px 4vw 0;
     }
 }
 

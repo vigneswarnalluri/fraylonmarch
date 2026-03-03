@@ -170,7 +170,6 @@
 }
 
 .footer-links a:hover {
-    color: var(--text-secondary);
     text-decoration: underline;
 }
 
@@ -197,7 +196,6 @@
 }
 
 .footer-bottom-link:hover {
-    color: #64748b;
     text-decoration: underline;
 }
 

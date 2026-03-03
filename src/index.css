@@ -28,8 +28,14 @@
   --container-xl: 1440px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+  }
+}
+
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -62,7 +68,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   position: relative;
 }
@@ -82,7 +88,7 @@ h6 {
 .container {
   max-width: var(--container-xl);
   margin: 0 auto;
-  padding: 0 5vw;
+  padding: 0 clamp(24px, 5vw, 40px);
 }
 
 /* Global Button System - Premium Polish */
@@ -159,6 +165,190 @@ h6 {
   background: var(--color-primary);
   color: #fff;
 }
+
+/* Shared Legal/Informational Page Layout */
+.legal-page {
+  padding-top: calc(var(--nav-height) + 80px);
+  padding-bottom: 120px;
+  background-color: var(--bg-body);
+}
+
+
+.legal-header {
+  max-width: 1200px;
+  margin-bottom: 80px;
+}
+
+.legal-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.legal-title {
+  font-size: 4rem;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  letter-spacing: -0.04em;
+  color: var(--color-brand-black);
+}
+
+.legal-updated {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.legal-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.meta-separator {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.legal-section {
+  margin-bottom: 60px;
+}
+
+.legal-section h2 {
+  font-size: 1.8rem;
+  color: var(--color-brand-navy);
+  margin-bottom: 25px;
+  letter-spacing: -0.02em;
+}
+
+.legal-section p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .legal-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .legal-page {
+    padding-top: calc(var(--nav-height) + 40px);
+  }
+
+  .legal-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Enhanced Legal Layout with Sidebar */
+.legal-container {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 80px;
+  width: 100%;
+}
+
+.legal-sidebar {
+  width: 280px !important;
+  flex-shrink: 0 !important;
+  padding-right: 20px;
+  position: relative;
+  height: auto !important;
+}
+
+.sidebar-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: calc(var(--nav-height) + 40px) !important;
+  padding-bottom: 40px;
+  height: fit-content;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.sidebar-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-brand-navy);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.legal-toc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.toc-item {
+  margin-bottom: 2px;
+}
+
+.toc-link {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.toc-link:hover {
+  color: var(--color-primary);
+  background: rgba(0, 191, 179, 0.03);
+}
+
+.toc-link.active {
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  background: rgba(0, 191, 179, 0.05);
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .legal-container {
+    gap: 40px;
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .legal-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .legal-sidebar {
+    display: none;
+    /* Hide TOC on smaller screens for cleaner look, or maybe move to dropdown later */
+  }
+}
+
 
 /* Cookie Banner Mobile Overrides */
 @media (max-width: 768px) {

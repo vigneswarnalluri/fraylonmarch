@@ -1,0 +1,112 @@
+/* Structural styles provided by index.css */
+
+.legal-content {
+    max-width: 100%;
+}
+
+
+
+/* Summary Grid */
+.legal-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.summary-item {
+    padding: 30px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.summary-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.summary-item h5 {
+    font-size: 1.1rem;
+    color: var(--color-brand-navy);
+    margin-bottom: 12px;
+}
+
+.summary-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 !important;
+}
+
+/* Alert Box */
+.alert-box {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: #fff9f0;
+    border-left: 4px solid #f59e0b;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+    color: #f59e0b;
+    flex-shrink: 0;
+}
+
+.alert-box p {
+    font-size: 1rem;
+    color: #92400e;
+    margin: 0 !important;
+    font-weight: 500;
+}
+
+/* Check List */
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.check-list li {
+    padding: 12px 0;
+    padding-left: 35px;
+    position: relative;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.check-list li::before {
+    content: '✕';
+    /* This is a "do not" list for use license */
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #ef4444;
+    font-weight: bold;
+}
+
+/* Terms Actions */
+.terms-actions {
+    margin-top: 80px;
+    padding: 60px;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+.terms-actions p {
+    font-size: 1.2rem;
+    color: var(--color-brand-navy);
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 991px) {
+    .legal-summary-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

@@ -48,15 +48,36 @@ const CookieConsent: React.FC = () => {
   };
 
   useEffect(() => {
-    const storedConsent = Cookies.get('cookieConsent');
+    const checkConsent = () => {
+      const storedConsent = Cookies.get('cookieConsent');
+      if (storedConsent) {
+        try {
+          const parsed = JSON.parse(storedConsent);
+          setPreferences({ necessary: true, analytics: !!parsed.analytics, marketing: !!parsed.marketing });
+          setIsVisible(false); // Hide banner if consent exists
+          if (parsed.analytics) loadGoogleAnalytics();
+        } catch (e) {
+          console.error('Error parsing cookie preferences', e);
+        }
+      }
+    };
 
-    if (!storedConsent) {
+    checkConsent();
+
+    if (!Cookies.get('cookieConsent')) {
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, 1000);
-      return () => clearTimeout(timer);
-    } else if (preferences.analytics) {
-      loadGoogleAnalytics();
+
+      const handleUpdate = () => {
+        checkConsent();
+      };
+
+      window.addEventListener('cookieConsentUpdated', handleUpdate);
+      return () => {
+        clearTimeout(timer);
+        window.removeEventListener('cookieConsentUpdated', handleUpdate);
+      };
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

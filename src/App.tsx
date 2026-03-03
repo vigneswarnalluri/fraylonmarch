@@ -36,6 +36,11 @@ const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Industries = lazy(() => import('./pages/Industries'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+const CookieSettings = lazy(() => import('./pages/CookieSettings'));
+
 
 // Lazy Loaded Service Pages
 const WordpressPage = lazy(() => import('./pages/services/WordpressPage'));
@@ -86,7 +91,11 @@ function App() {
       '/news': 'News & Press | Fraylon Updates',
       '/solutions': 'Enterprise Solutions | Consulting | Fraylon',
       '/industries': 'Industry Expertise | Fraylon Technologies',
-      '/projects': 'Our Work | Case Studies | Fraylon'
+      '/projects': 'Our Work | Case Studies | Fraylon',
+      '/privacy-policy': 'Privacy Policy | Fraylon Technologies',
+      '/terms-of-use': 'Terms of Use | Fraylon Technologies',
+      '/sitemap': 'Sitemap | Fraylon Technologies',
+      '/cookie-settings': 'Cookie Settings | Fraylon Technologies'
     };
 
     // Handle dynamic routes
@@ -114,10 +123,10 @@ function App() {
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
           >
             <Suspense fallback={<PageLoading />}>
               <Routes location={location}>
@@ -168,6 +177,10 @@ function App() {
                 <Route path="/work/:id" element={<ProjectDetail />} />
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/ind/:type" element={<Industries />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-use" element={<TermsOfUse />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/cookie-settings" element={<CookieSettings />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
