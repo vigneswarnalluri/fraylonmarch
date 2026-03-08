@@ -381,8 +381,8 @@ const Solutions = () => {
                                 {solution.comparison.map((row, i) => (
                                     <tr key={i}>
                                         <td className="feature-col">{row.feature}</td>
-                                        <td>{row.fraylon}</td>
-                                        <td style={{ color: '#64748b' }}>{row.others}</td>
+                                        <td className="fraylon-col">{row.fraylon}</td>
+                                        <td className="others-col">{row.others}</td>
                                     </tr>
                                 ))}
                             </tbody>

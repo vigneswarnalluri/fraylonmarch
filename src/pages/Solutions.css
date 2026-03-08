@@ -575,12 +575,21 @@
 }
 
 .comparison-table td {
-    color: #fff;
+    color: var(--text-main);
 }
 
 .feature-col {
     color: var(--color-primary) !important;
     font-weight: 600;
+}
+
+.fraylon-col {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.others-col {
+    color: var(--text-secondary);
 }
 
 /* Responsive */

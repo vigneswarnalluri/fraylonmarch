@@ -168,7 +168,7 @@ const TermsOfUse = () => {
 
                         <div className="terms-actions">
                             <p>Have questions about these terms?</p>
-                            <a href="mailto:legal@fraylontech.com" className="btn btn-primary">Contact Legal Team</a>
+                            <a href="mailto:contact@fraylontech.com" className="btn btn-primary">Contact Us</a>
                         </div>
                     </main>
                 </div>

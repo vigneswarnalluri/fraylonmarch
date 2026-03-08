@@ -154,9 +154,17 @@
     color: var(--color-primary);
 }
 
-.method span {
+.method-link {
     font-size: 1.1rem;
     font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.method-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

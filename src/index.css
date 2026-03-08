@@ -161,10 +161,7 @@ h6 {
   background: var(--text-muted);
 }
 
-::selection {
-  background: var(--color-primary);
-  color: #fff;
-}
+
 
 /* Shared Legal/Informational Page Layout */
 .legal-page {

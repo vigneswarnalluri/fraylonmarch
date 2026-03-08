@@ -35,7 +35,7 @@ const Footer = () => {
                     <div className="footer-contact-info-brand">
                         <p>Hyderabad, Telangana, India, 500001</p>
                         <p><a href="mailto:contact@fraylontech.com">contact@fraylontech.com</a></p>
-                        <p><a href="tel:+919381617904">+91 93816 17904</a></p>
+                        <p><a href="tel:+919059006521">+91 90590 06521</a></p>
                     </div>
                 </div>
 

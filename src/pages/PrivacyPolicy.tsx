@@ -185,11 +185,11 @@ const PrivacyPolicy = () => {
                                 <div className="contact-methods">
                                     <div className="method">
                                         <FaEnvelope className="method-icon" />
-                                        <span>privacy@fraylontech.com</span>
+                                        <a href="mailto:contact@fraylontech.com" className="method-link">contact@fraylontech.com</a>
                                     </div>
                                     <div className="method">
                                         <FaPhone className="method-icon" />
-                                        <span>+91 (040) 2345-6789</span>
+                                        <a href="tel:+919059006521" className="method-link">+91 90590 06521</a>
                                     </div>
                                     <div className="method">
                                         <FaMapMarkerAlt className="method-icon" />

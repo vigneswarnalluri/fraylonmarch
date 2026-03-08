@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiCompass, FiCpu, FiLayers, FiFileText, FiShield, FiSearch, FiArrowRight } from 'react-icons/fi';
+import { FiCpu, FiLayers, FiFileText, FiSearch, FiArrowRight, FiActivity, FiBriefcase, FiZap, FiGrid, FiFeather } from 'react-icons/fi';
 import './Sitemap.css';
 
 const Sitemap = () => {
@@ -9,58 +9,116 @@ const Sitemap = () => {
 
     const siteStructure = [
         {
-            title: "Main",
-            icon: <FiCompass />,
-            description: "Core organization and navigation",
+            title: "Company",
+            icon: <FiBriefcase />,
+            description: "Core organization and leadership",
             links: [
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
                 { name: "Leadership", path: "/leadership" },
                 { name: "Careers", path: "/careers" },
+                { name: "Strategic Partners", path: "/partners" },
+                { name: "News & Media", path: "/news" },
                 { name: "Contact Us", path: "/contact" }
             ]
         },
         {
-            title: "Services",
+            title: "Software Engineering",
             icon: <FiCpu />,
-            description: "Deep technical expertise and delivery",
+            description: "Custom development and platform expertise",
             links: [
-                { name: "No Code Development", path: "/services/no-code" },
-                { name: "Custom Development", path: "/services/custom-dev" },
-                { name: "Design Services", path: "/services/design" },
-                { name: "Marketing Services", path: "/services/marketing" },
-                { name: "AI & Data Science", path: "/services/ai-data" },
-                { name: "Mobile Development", path: "/services/mobile-app" }
+                { name: "Software Development", path: "/services/software-dev" },
+                { name: "Web Application Development", path: "/services/web-app-dev" },
+                { name: "Custom Website & CMS", path: "/services/custom-cms" },
+                { name: "Enterprise Portals & Dashboard", path: "/services/portals" },
+                { name: "eCommerce Website Dev", path: "/services/ecommerce" },
+                { name: "MVP Development", path: "/services/mvp-development" },
+                { name: "Rapid Prototyping", path: "/services/prototyping" },
+                { name: "Native Mobile App", path: "/services/native-app" },
+                { name: "Hybrid Mobile App", path: "/services/hybrid-app" }
+            ]
+        },
+        {
+            title: "Low Code & Platforms",
+            icon: <FiLayers />,
+            description: "Specialized platform solutions",
+            links: [
+                { name: "WordPress Development", path: "/services/wordpress" },
+                { name: "Webflow Development", path: "/services/webflow" },
+                { name: "Wix Development", path: "/services/wix" },
+                { name: "Shopify Development", path: "/services/shopify" },
+                { name: "Magento Development", path: "/services/magento" },
+                { name: "Bubble.io Development", path: "/services/bubble" },
+                { name: "Framer Development", path: "/services/framer" },
+                { name: "Dora Development", path: "/services/dora" },
+                { name: "Studio AI Development", path: "/services/studio-ai" }
+            ]
+        },
+        {
+            title: "AI & Innovation",
+            icon: <FiZap />,
+            description: "Future-ready intelligence and strategy",
+            links: [
+                { name: "Digital Transformation", path: "/services/digital-transformation" },
+                { name: "AI Integration & Strategy", path: "/services/ai-integration" },
+                { name: "AI Agents Development", path: "/services/ai-agents" },
+                { name: "Natural Language Processing", path: "/services/nlp" },
+                { name: "Technology Consulting", path: "/services/tech-consulting" },
+                { name: "IT Staff Augmentation", path: "/services/staff-augmentation" },
+                { name: "Maintenance & Support", path: "/services/maintenance" }
+            ]
+        },
+        {
+            title: "Design & Marketing",
+            icon: <FiFeather />,
+            description: "Visual identity and digital growth",
+            links: [
+                { name: "UI/UX & Product Design", path: "/services/ui-ux" },
+                { name: "Branding & Visual Identity", path: "/services/branding" },
+                { name: "Graphic Design", path: "/services/graphic-design" },
+                { name: "Inbound Marketing", path: "/services/inbound-marketing" },
+                { name: "SEO Services", path: "/services/seo" },
+                { name: "Social Media & Paid Ads", path: "/services/social-media" }
+            ]
+        },
+        {
+            title: "Enterprise Solutions",
+            icon: <FiActivity />,
+            description: "Industrial scale systems and security",
+            links: [
+                { name: "Cloud Transformation", path: "/solutions/cloud" },
+                { name: "Data & Analytics", path: "/solutions/data" },
+                { name: "Intelligent Automation", path: "/solutions/automation" },
+                { name: "SAP S/4HANA", path: "/solutions/sap" },
+                { name: "Oracle Cloud", path: "/solutions/oracle" },
+                { name: "Smart Supply Chain", path: "/solutions/supply-chain" },
+                { name: "Cybersecurity", path: "/solutions/cyber" },
+                { name: "Cloud Security", path: "/solutions/cloud-sec" }
             ]
         },
         {
             title: "Industries",
-            icon: <FiLayers />,
-            description: "Sector-specific digital transformation",
+            icon: <FiGrid />,
+            description: "Sector-specific expertise",
             links: [
                 { name: "Banking & Finance", path: "/ind/banking" },
-                { name: "Healthcare", path: "/ind/health" },
-                { name: "Manufacturing", path: "/ind/manufacturing" },
-                { name: "Retail & E-commerce", path: "/ind/retail" },
-                { name: "Energy & Utilities", path: "/ind/energy" }
+                { name: "Insurance", path: "/ind/insurance" },
+                { name: "Payments & Fintech", path: "/ind/payments" },
+                { name: "Retail & Consumer Goods", path: "/ind/retail" },
+                { name: "Healthcare & Life Sciences", path: "/ind/health" },
+                { name: "Industrial Manufacturing", path: "/ind/manufacturing" },
+                { name: "Energy & Utilities", path: "/ind/energy" },
+                { name: "Telecommunications", path: "/ind/telecom" },
+                { name: "Public Sector", path: "/ind/public" }
             ]
         },
         {
-            title: "Insights",
+            title: "Resources & Legal",
             icon: <FiFileText />,
-            description: "Thought leadership and case studies",
+            description: "Policies and thought leadership",
             links: [
-                { name: "All Insights", path: "/insights" },
-                { name: "News & Media", path: "/news" },
-                { name: "Partners", path: "/partners" },
-                { name: "Projects", path: "/projects" }
-            ]
-        },
-        {
-            title: "Legal",
-            icon: <FiShield />,
-            description: "Policies and compliance frameworks",
-            links: [
+                { name: "Insights Hub", path: "/insights" },
+                { name: "Projects Portfolio", path: "/projects" },
                 { name: "Privacy Policy", path: "/privacy-policy" },
                 { name: "Terms of Use", path: "/terms-of-use" },
                 { name: "Cookie Settings", path: "/cookie-settings" },
