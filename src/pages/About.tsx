@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaLightbulb, FaShieldAlt, FaUsers } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './About.css';
 
 const MotionLink = motion(Link);
@@ -8,6 +9,11 @@ const MotionLink = motion(Link);
 const About = () => {
     return (
         <div className="about-page">
+            <SEO 
+                title="About Us | Fraylon Technologies" 
+                description="We are Fraylon. Architects of the Digital Future combining strategic foresight with deep technical expertise."
+                url="https://fraylontech.com/about"
+            />
             <div className="container">
                 {/* --- Hero Section --- */}
                 <div className="about-hero">

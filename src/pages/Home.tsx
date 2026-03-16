@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Industries from '../components/Industries';
@@ -10,6 +11,7 @@ import Contact from '../components/Contact';
 const Home = () => {
     return (
         <>
+            <SEO />
             <Hero />
             <Services />
             <Industries />
