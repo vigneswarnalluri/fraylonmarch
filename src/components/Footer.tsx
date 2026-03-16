@@ -1,4 +1,5 @@
-import { FaLinkedin, FaTwitter, FaYoutube, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -19,10 +20,10 @@ const Footer = () => {
                         <img src="/logo.png" alt="Fraylon Logo" className="footer-logo-img" />
                     </div>
                     <div className="social-links">
-                        <a href="#" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
-                        <a href="#" className="social-icon" aria-label="Twitter"><FaTwitter /></a>
-                        <a href="#" className="social-icon" aria-label="YouTube"><FaYoutube /></a>
-                        <a href="#" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
+                        <a href="https://www.linkedin.com/company/fraylontechnologies" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
+                        <a href="https://x.com/FraylonT53985" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="X"><FaXTwitter /></a>
+                        <a href="https://www.facebook.com/people/Fraylon-Technologies/61585342064284" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
+                        <a href="https://www.instagram.com/fraylontechnologies/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
                     </div>
                     <div className="newsletter-section">
                         <h5>Stay Informed</h5>
@@ -32,8 +33,9 @@ const Footer = () => {
                         </form>
                     </div>
                     <div className="footer-contact-info-brand">
-                        <p>Hyderabad, Telangana, India, 500001</p>
+                        <p>H No: 6-477, Sri Ram Nagar Colony, Balaji Nagar, Hyderabad, Telangana - 500087</p>
                         <p><a href="mailto:contact@fraylontech.com">contact@fraylontech.com</a></p>
+                        <p><a href="tel:+17048281085">+1 (704) 828-1085</a></p>
                         <p><a href="tel:+919059006521">+91 90590 06521</a></p>
                     </div>
                 </div>
@@ -41,20 +43,20 @@ const Footer = () => {
                 <div className="footer-nav-col">
                     <h4>Services</h4>
                     <ul className="footer-links">
-                        <li><Link to="/services/no-code">No Code Development</Link></li>
-                        <li><Link to="/services/custom-dev">Custom Development</Link></li>
-                        <li><Link to="/services/design">Design Services</Link></li>
-                        <li><Link to="/services/marketing">Marketing Services</Link></li>
-                        <li><Link to="/services/ai-data">AI & Data Science</Link></li>
-                        <li><Link to="/services/mobile-app">Mobile App Development</Link></li>
-                        <li><Link to="/services/zero-to-one">Zero To One</Link></li>
+                        <li><Link to="/services/wordpress">WordPress Development</Link></li>
+                        <li><Link to="/services/software-dev">Custom Software</Link></li>
+                        <li><Link to="/services/ui-ux">Design Services</Link></li>
+                        <li><Link to="/services/inbound-marketing">Digital Marketing</Link></li>
+                        <li><Link to="/services/ai-integration">AI & Data Science</Link></li>
+                        <li><Link to="/services/native-app">Mobile Apps</Link></li>
+                        <li><Link to="/services/mvp-development">MVP Development</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-nav-col">
                     <h4>Solutions</h4>
                     <ul className="footer-links">
-                        <li><Link to="/services/it-solutions">IT Solutions</Link></li>
+                        <li><Link to="/services/tech-consulting">IT Consulting</Link></li>
                         <li><Link to="/solutions/cloud">Cloud Transformation</Link></li>
                         <li><Link to="/solutions/cyber">Cyber Security</Link></li>
                         <li><Link to="/solutions/sap">Enterprise ERP</Link></li>

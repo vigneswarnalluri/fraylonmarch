@@ -11,7 +11,7 @@ import vigneswarImg from '../assets/images/vigneswar-nalluri.jpg';
 const FamilyTree = () => {
     const executiveTeam = [
         {
-            name: "Ch. Ram Teja",
+            name: "Ram Teja Chalamalapalli",
             role: "Chief Executive Officer",
             image: ramTejaImg,
             bio: "Visionary leader driving global digital transformation and enterprise growth through modern innovation."
@@ -46,7 +46,7 @@ const FamilyTree = () => {
     const familyInsights = [
         {
             title: "The Agentic Era: Our Family's Vision",
-            author: "Ch. Ram Teja",
+            author: "Ram Teja Chalamalapalli",
             date: "March 2026",
             link: "/insights/1"
         },

@@ -211,7 +211,7 @@ const Contact = () => {
                             
                             <div className="hq-detail-block">
                                 <h4 className="hub-city">Hyderabad</h4>
-                                <p className="hub-address">India — Engineering Square, Phase II<br />HITEC City, Telangana</p>
+                                <p className="hub-address">H No: 6-477, Sri Ram Nagar Colony<br />Balaji Nagar, Hyderabad, Telangana - 500087</p>
                                 <a href="mailto:india.hq@fraylon.com" className="hub-contact">
                                     india.hq@fraylon.com <FiArrowUpRight />
                                 </a>

@@ -13,6 +13,7 @@ import {
   FaInfoCircle, FaUserTie, FaHandshake, FaNewspaper,
   FaChevronRight, FaLinkedin, FaFacebook, FaInstagram, FaPlus, FaMinus, FaChevronLeft
 } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { SiWebflow, SiFramer, SiSap, SiOracle } from 'react-icons/si';
 import './Navbar.css';
 
@@ -403,9 +404,10 @@ const Navbar = () => {
                     </div>
 
                     <div className="mobile-social-icons">
-                      <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-                      <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>
-                      <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
+                      <a href="https://www.linkedin.com/company/fraylontechnologies" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                      <a href="https://x.com/FraylonT53985" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
+                      <a href="https://www.facebook.com/people/Fraylon-Technologies/61585342064284" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+                      <a href="https://www.instagram.com/fraylontechnologies/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                     </div>
                   </motion.div>
                 )}

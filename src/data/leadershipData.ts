@@ -19,7 +19,7 @@ export const executiveCouncil: Leader[] = [
     {
         id: "ceo",
         slug: "ch-ram-teja",
-        name: "Ch. Ram Teja",
+        name: "Ram Teja Chalamalapalli",
         role: "Chief Executive Officer",
         image: ramTejaImg,
         tag: "EXECUTIVE COUNCIL",

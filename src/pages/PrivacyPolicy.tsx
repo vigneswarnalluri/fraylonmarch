@@ -187,13 +187,16 @@ const PrivacyPolicy = () => {
                                         <FaEnvelope className="method-icon" />
                                         <a href="mailto:contact@fraylontech.com" className="method-link">contact@fraylontech.com</a>
                                     </div>
-                                    <div className="method">
-                                        <FaPhone className="method-icon" />
-                                        <a href="tel:+919059006521" className="method-link">+91 90590 06521</a>
+                                    <div className="method" style={{ alignItems: 'flex-start' }}>
+                                        <FaPhone className="method-icon" style={{ marginTop: '5px' }} />
+                                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                            <a href="tel:+17048281085" className="method-link" style={{ marginBottom: '4px' }}>+1 (704) 828-1085</a>
+                                            <a href="tel:+919059006521" className="method-link">+91 90590 06521</a>
+                                        </div>
                                     </div>
                                     <div className="method">
                                         <FaMapMarkerAlt className="method-icon" />
-                                        <span>Hyderabad, Telangana, India</span>
+                                        <span>H No: 6-477, Sri Ram Nagar Colony, Balaji Nagar, Hyderabad, Telangana - 500087</span>
                                     </div>
                                 </div>
                             </div>
