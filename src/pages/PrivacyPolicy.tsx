@@ -191,7 +191,7 @@ const PrivacyPolicy = () => {
                                         <FaPhone className="method-icon" style={{ marginTop: '5px' }} />
                                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                                             <a href="tel:+17048281085" className="method-link" style={{ marginBottom: '4px' }}>+1 (704) 828-1085</a>
-                                            <a href="tel:+919059006521" className="method-link">+91 90590 06521</a>
+                                            <a href="tel:+919381617904" className="method-link">+91 93816 17904</a>
                                         </div>
                                     </div>
                                     <div className="method">
