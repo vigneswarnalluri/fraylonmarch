@@ -196,7 +196,7 @@ const PrivacyPolicy = () => {
                                     </div>
                                     <div className="method">
                                         <FaMapMarkerAlt className="method-icon" />
-                                        <span>H No: 6-477, Sri Ram Nagar Colony, Balaji Nagar, Hyderabad, Telangana - 500087</span>
+                                        <span>6-477, Sri Ram Nagar Colony, Balaji Nagar, Hyderabad, Telangana - 500087</span>
                                     </div>
                                 </div>
                             </div>
