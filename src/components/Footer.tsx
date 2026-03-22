@@ -33,7 +33,7 @@ const Footer = () => {
                         </form>
                     </div>
                     <div className="footer-contact-info-brand">
-
+                        <p>H No: 6-477, Sri Ram Nagar Colony, Balaji Nagar, Hyderabad, Telangana - 500087</p>
                         <p><a href="mailto:contact@fraylontech.com">contact@fraylontech.com</a></p>
                         <p><a href="tel:+17048281085">+1 (704) 828-1085</a></p>
                         <p><a href="tel:+919381617904">+91 93816 17904</a></p>

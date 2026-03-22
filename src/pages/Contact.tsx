@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
-// import { FiArrowUpRight } from 'react-icons/fi';
+import { FiArrowUpRight } from 'react-icons/fi';
 import './Contact.css';
 
 const Contact = () => {
@@ -197,7 +197,49 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Flagship Headquarters - Temporarily Removed */}
+            {/* 4. Flagship Headquarters */}
+            <section className="global-network">
+                <div className="container">
+                    <div className="hq-flagship-container">
+                        <div className="hq-visual-side">
+                            <iframe 
+                                title="Fraylon Hyderabad HQ"
+                                className="hq-image"
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0 }} 
+                                loading="lazy" 
+                                allowFullScreen 
+                                src="https://maps.google.com/maps?q=H%20No:%206-477,%20Sri%20Ram%20Nagar%20Colony,%20Balaji%20Nagar,%20Hyderabad,%20Telangana%20-%20500087&output=embed"
+                            ></iframe>
+                            <div className="hq-visual-overlay"></div>
+                        </div>
+                        <div className="hq-info-side">
+                            <span className="section-tag" style={{ textAlign: 'left', marginBottom: '20px' }}>/ Strategic Hub</span>
+                            <h3>Flagship <br />Headquarters.</h3>
+                            
+                            <div className="hq-detail-block">
+                                <h4 className="hub-city">Hyderabad</h4>
+                                <p className="hub-address">H No: 6-477, Sri Ram Nagar Colony<br />Balaji Nagar, Hyderabad, Telangana - 500087</p>
+                                <a href="mailto:india.hq@fraylon.com" className="hub-contact">
+                                    india.hq@fraylon.com <FiArrowUpRight />
+                                </a>
+                            </div>
+
+                            <div className="hq-highlights">
+                                <div className="highlight-item">
+                                    <span className="h-label">Capabilities</span>
+                                    <span className="h-value">Core Engineering, AI R&D</span>
+                                </div>
+                                <div className="highlight-item">
+                                    <span className="h-label">Operations</span>
+                                    <span className="h-value">24/7 Global Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <footer style={{ padding: '40px 0', textAlign: 'center', opacity: '0.3', fontSize: '0.8rem' }}>
                 FRAYLON TECHNOLOGIES © 2026 — ALL RIGHTS RESERVED
