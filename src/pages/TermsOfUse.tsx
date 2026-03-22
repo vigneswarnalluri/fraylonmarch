@@ -162,7 +162,7 @@ const TermsOfUse = () => {
                         <section id="governing-law" className="legal-section">
                             <h2>5. Governing Law</h2>
                             <p>
-                                These terms and conditions are governed by and construed in accordance with the laws of India. Any disputes relating to these terms shall be subject to the exclusive jurisdiction of the courts located in Hyderabad, Telangana.
+                                These terms and conditions are governed by and construed in accordance with the laws of India. Any disputes relating to these terms shall be subject to the exclusive jurisdiction of the courts located in India.
                             </p>
                         </section>
 

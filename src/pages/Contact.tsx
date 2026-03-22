@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
-import { FiArrowUpRight } from 'react-icons/fi';
+// import { FiArrowUpRight } from 'react-icons/fi';
 import './Contact.css';
 
 const Contact = () => {
@@ -197,7 +197,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* 4. Flagship Headquarters */}
+            {/* 4. Flagship Headquarters - Temporarily Removed
             <section className="global-network">
                 <div className="container">
                     <div className="hq-flagship-container">
@@ -231,6 +231,7 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
+            */}
 
             <footer style={{ padding: '40px 0', textAlign: 'center', opacity: '0.3', fontSize: '0.8rem' }}>
                 FRAYLON TECHNOLOGIES © 2026 — ALL RIGHTS RESERVED

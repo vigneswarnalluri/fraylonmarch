@@ -12,7 +12,7 @@ interface SEOProps {
 const SEO = ({
   title = 'Fraylon Technologies | Engineering the Future',
   description = 'Fraylon Technologies is a global leader in next-generation digital services and consulting. We engineer the future through AI, engineering strategy, and digital evolution.',
-  keywords = 'IT services, software development, AI integration, digital transformation, consulting, technology solutions, Fraylon Technologies, Hyderabad IT company, Web Development, UI/UX',
+  keywords = 'IT services, software development, AI integration, digital transformation, consulting, technology solutions, Fraylon Technologies, Software Development Company, Web Development, UI/UX',
   image = 'https://fraylontech.com/logo.png',
   url = 'https://fraylontech.com/',
   type = 'website'

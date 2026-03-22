@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInfoCircle, FaShieldAlt, FaLock, FaChartLine } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaInfoCircle, FaShieldAlt, FaLock, FaChartLine } from 'react-icons/fa';
 import './PrivacyPolicy.css';
 
 const PrivacyPolicy = () => {
@@ -194,10 +194,10 @@ const PrivacyPolicy = () => {
                                             <a href="tel:+919381617904" className="method-link">+91 93816 17904</a>
                                         </div>
                                     </div>
-                                    <div className="method">
+                                    {/* <div className="method">
                                         <FaMapMarkerAlt className="method-icon" />
                                         <span>H No: 6-477, Sri Ram Nagar Colony, Balaji Nagar, Hyderabad, Telangana - 500087</span>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </section>
