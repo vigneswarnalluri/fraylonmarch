@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiLinkedin, FiSearch, FiFilter } from 'react-icons/fi';
 import { executiveCouncil, globalLeadership } from '../data/leadershipData';
+import DomeGallery from '../components/DomeGallery';
 import './Leadership.css';
 
 const familyInsights = [
@@ -124,6 +125,25 @@ const Leadership = () => {
                         ))}
                     </div>
                 </div>
+            </section>
+
+            {/* --- Leadership Gallery --- */}
+            <section className="leadership-gallery-section" style={{ height: '1000px', backgroundColor: '#ffffff', position: 'relative' }}>
+                <div className="container" style={{ position: 'absolute', top: '40px', left: '0', right: '0', zIndex: 10, pointerEvents: 'none' }}>
+                    <div className="section-title-box">
+                        <span className="line-tag" style={{ color: '#000000', borderColor: 'rgba(0,0,0,0.2)' }}>LEADERSHIP NETWORK IN MOTION</span>
+                    </div>
+                </div>
+                <DomeGallery
+                    images={[...executiveCouncil, ...globalLeadership].filter(m => m.image).map(m => ({ src: m.image, alt: m.name }))}
+                    fit={0.9}
+                    minRadius={500}
+                    maxVerticalRotationDeg={10}
+                    segments={34}
+                    dragDampening={2}
+                    grayscale
+                    overlayBlurColor="#ffffff"
+                />
             </section>
 
             {/* --- MNC Insights --- */}

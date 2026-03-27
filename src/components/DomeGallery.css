@@ -1,0 +1,164 @@
+.sphere-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 1000px;
+  background-color: var(--overlay-blur-color);
+  touch-action: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sphere-main {
+  position: absolute;
+  top: var(--viewer-pad, 20px);
+  left: var(--viewer-pad, 20px);
+  right: var(--viewer-pad, 20px);
+  bottom: var(--viewer-pad, 20px);
+  border-radius: var(--enlarge-radius, 30px);
+  overflow: hidden;
+  background: var(--overlay-blur-color);
+  perspective: 1200px;
+}
+
+.stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+}
+
+.sphere {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  --unit: calc(360deg / (var(--segments-x) * 2));
+  --rot-y-base: calc(var(--unit) * (var(--offset-x) + (var(--item-size-x) - 1) / 2));
+  --rot-x-base: calc(var(--unit) * (var(--offset-y) - (var(--item-size-y) - 1) / 2));
+  --rot-y: calc(var(--rot-y-base) + var(--rot-y-delta, 0deg));
+  --rot-x: calc(var(--rot-x-base) + var(--rot-x-delta, 0deg));
+  transform: translate(-50%, -50%) rotateY(var(--rot-y)) rotateX(var(--rot-x)) translateZ(var(--radius));
+  width: calc((3.14159 * var(--radius) * 2 / (var(--segments-x) * 2)) * var(--item-size-x) - 50px);
+  height: calc((3.14159 * var(--radius) * 2 / (var(--segments-y) * 2)) * var(--item-size-y) - 50px);
+  pointer-events: auto;
+  transition: transform 0.4s ease-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.item__image {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--tile-radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  filter: var(--image-filter);
+  transition: filter 0.3s ease;
+  user-select: none;
+}
+
+.item__image:hover {
+  filter: grayscale(0) !important;
+}
+
+.item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+}
+
+.item__image--reference {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+
+.overlay--blur {
+  background: radial-gradient(circle at 50% 50%, transparent 40%, var(--overlay-blur-color) 85%);
+}
+
+.edge-fade {
+  position: absolute;
+  left: 0; right: 0;
+  height: 15%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.edge-fade--top {
+  top: 0;
+  background: linear-gradient(to bottom, var(--overlay-blur-color), transparent);
+}
+
+.edge-fade--bottom {
+  bottom: 0;
+  background: linear-gradient(to top, var(--overlay-blur-color), transparent);
+}
+
+.viewer {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.viewer .enlarge {
+  pointer-events: auto;
+  border-radius: var(--enlarge-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.viewer .enlarge img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.scrim {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.sphere-root[data-enlarging="true"] .scrim {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.frame {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(80vw, 800px);
+  height: min(80vh, 800px);
+  pointer-events: none;
+}
+
+.dg-scroll-lock {
+  overflow: hidden !important;
+}

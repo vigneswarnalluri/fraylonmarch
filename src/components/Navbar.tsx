@@ -282,6 +282,7 @@ const Navbar = () => {
                 <h4>Who We Are</h4>
                 <Link to="/about"><FaInfoCircle /> About Fraylon</Link>
                 <Link to="/leadership"><FaUserTie /> Leadership Team</Link>
+                <Link to="/projects"><FaChartLine /> Case Studies & Work</Link>
                 <Link to="/partners"><FaHandshake /> Strategic Partners</Link>
                 <Link to="/news"><FaNewspaper /> News & Media</Link>
               </div>

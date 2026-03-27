@@ -116,7 +116,7 @@ const ServiceCard = ({ service, index }: { service: ServiceItem, index: number }
 
 const Services = () => {
     return (
-        <section className="services-section">
+        <section id="services" className="services-section">
             <div className="container">
                 <div className="section-header">
                     <div>
