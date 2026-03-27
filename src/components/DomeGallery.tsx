@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
 import './DomeGallery.css';
 
-type ImageItem = string | { src: string; alt?: string };
+type ImageItem = string | { src: string; alt?: string; imagePosition?: string };
 
 type DomeGalleryProps = {
   images?: ImageItem[];
@@ -31,6 +31,7 @@ type ItemDef = {
   y: number;
   sizeX: number;
   sizeY: number;
+  imagePosition: string;
 };
 
 const DEFAULT_IMAGES: ImageItem[] = [
@@ -95,7 +96,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
 
   const totalSlots = coords.length;
   if (pool.length === 0) {
-    return coords.map(c => ({ ...c, src: '', alt: '' }));
+    return coords.map(c => ({ ...c, src: '', alt: '', imagePosition: '' }));
   }
   if (pool.length > totalSlots) {
     console.warn(
@@ -105,9 +106,9 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
 
   const normalizedImages = pool.map(image => {
     if (typeof image === 'string') {
-      return { src: image, alt: '' };
+      return { src: image, alt: '', imagePosition: '' };
     }
-    return { src: image.src || '', alt: image.alt || '' };
+    return { src: image.src || '', alt: image.alt || '', imagePosition: image.imagePosition || '' };
   });
 
   const usedImages = Array.from({ length: totalSlots }, (_, i) => normalizedImages[i % normalizedImages.length]);
@@ -128,7 +129,8 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
   return coords.map((c, i) => ({
     ...c,
     src: usedImages[i].src,
-    alt: usedImages[i].alt
+    alt: usedImages[i].alt,
+    imagePosition: usedImages[i].imagePosition
   }));
 }
 
@@ -737,7 +739,7 @@ export default function DomeGallery({
                   onClick={onTileClick}
                   onPointerUp={onTilePointerUp}
                 >
-                  <img src={it.src} draggable={false} alt={it.alt} />
+                  <img src={it.src} draggable={false} alt={it.alt} style={{ objectPosition: it.imagePosition || 'top center' }} />
                 </div>
               </div>
             ))}

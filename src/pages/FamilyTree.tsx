@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './FamilyTree.css';
 
 // Reusing image imports from Leadership if available
-import ramTejaImg from '../assets/images/alex-fraylon.jpg'; // Using existing paths
+import ramTejaImg from '../assets/images/ram.png'; // Using existing paths
 import vigneswarImg from '../assets/images/vigneswar-nalluri.jpg';
 
 const FamilyTree = () => {

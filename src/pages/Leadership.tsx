@@ -69,7 +69,7 @@ const Leadership = () => {
                                 transition={{ delay: i * 0.1, duration: 0.8 }}
                             >
                                 <div className="member-image-wrapper">
-                                    <img src={member.image} alt={member.name} />
+                                    <img src={member.image} alt={member.name} style={{ objectPosition: member.imagePosition || 'top center' }} />
                                     <div className="social-overlay">
                                         <FiLinkedin />
                                     </div>
@@ -104,7 +104,7 @@ const Leadership = () => {
                             >
                                 {member.image && (
                                     <div className="leader-row-avatar">
-                                        <img src={member.image} alt={member.name} />
+                                        <img src={member.image} alt={member.name} style={{ objectPosition: member.imagePosition || 'top center' }} />
                                     </div>
                                 )}
                                 <div className="row-content">
@@ -135,7 +135,7 @@ const Leadership = () => {
                     </div>
                 </div>
                 <DomeGallery
-                    images={[...executiveCouncil, ...globalLeadership].filter(m => m.image).map(m => ({ src: m.image, alt: m.name }))}
+                    images={[...executiveCouncil, ...globalLeadership].filter(m => m.image).map(m => ({ src: m.image, alt: m.name, imagePosition: m.imagePosition }))}
                     fit={0.9}
                     minRadius={500}
                     maxVerticalRotationDeg={10}

@@ -1,5 +1,7 @@
-import ramTejaImg from '../assets/images/alex-fraylon.jpg';
+import ramTejaImg from '../assets/images/ram.png';
 import vigneswarImg from '../assets/images/vigneswar-nalluri.jpg';
+import lavanyaImg from '../assets/images/lavanya.webp';
+import yuvarajImg from '../assets/images/yuvaraj.webp';
 
 export interface Leader {
     id: string;
@@ -13,6 +15,7 @@ export interface Leader {
     contact?: string;
     tag?: string;
     location?: string;
+    imagePosition?: string;
 }
 
 export const executiveCouncil: Leader[] = [
@@ -24,6 +27,7 @@ export const executiveCouncil: Leader[] = [
         image: ramTejaImg,
         tag: "EXECUTIVE COUNCIL",
         location: "Global HQ",
+        imagePosition: "50% 0%",
         shortBio: "Leading Fraylon’s global network of 100,000+ professionals across 140 countries, Ram is dedicated to defining the future of digital equity and architectural excellence.",
         fullBio: [
             "As the Global Chairman and Chief Executive Officer of Fraylon, Ram leads an integrated Network Leadership Team which brings together thousands of people across a network of firms in 140 countries and territories.",
@@ -62,31 +66,17 @@ export const globalLeadership: Leader[] = [
         role: "President, Global Markets",
         tag: "GLOBAL OPERATIONS",
         location: "EMEA & Americas",
+        imagePosition: "50% 0%",
         shortBio: "Specializing in institutional scale and market diversification, Lavanya ensures Fraylon’s divisions operate at the peak of global performance.",
         fullBio: [
             "Lavanya serves as the President of Global Markets, where she is responsible for Fraylon's operational P&L across the EMEA and Americas regions. She manages a portfolio of over 200 high-impact enterprise accounts.",
             "With a background in international economics and crisis management, she is instrumental in Fraylon's ability to maintain continuity and growth in highly volatile geopolitical environments.",
             "She currently chairs the Fraylon Diversity Board, focusing on building high-performance cross-cultural teams that reflect the diversity of the global markets Fraylon serves."
         ],
-        image: "",
+        image: lavanyaImg,
         linkedIn: "https://linkedin.com"
     },
-    {
-        id: "co-president",
-        slug: "mahitha-bathula",
-        name: "Mahitha Bathula",
-        role: "President, Strategic Alliances",
-        tag: "GLOBAL OPERATIONS",
-        location: "Asia-Pacific & Middle East",
-        shortBio: "A master of cross-border integration, Mahitha spearheads Fraylon’s joint ventures and strategic institutional partnerships.",
-        fullBio: [
-            "As the President of Strategic Alliances, Mahitha oversees Fraylon’s expansion into the Asia-Pacific and Middle Eastern tech ecosystems. She has successfully brokered over 15 major joint ventures in the past three years.",
-            "Her focus is on 'Collaborative Disruption,' working with local governments and sovereign funds to build future-ready digital foundations through Fraylon's specialized infrastructure.",
-            "Mahitha is recognized globally for her expertise in public-private partnerships (PPP) and has been named one of the 'Top 50 Innovators' in the APAC region for her work on digital inclusivity."
-        ],
-        image: "",
-        linkedIn: "https://linkedin.com"
-    },
+
     {
         id: "coo",
         slug: "yuvaraj-dudukuru",
@@ -94,13 +84,14 @@ export const globalLeadership: Leader[] = [
         role: "Chief Operating Officer",
         tag: "GLOBAL OPERATIONS",
         location: "Supply Chain & Delivery",
+        imagePosition: "50% 0%",
         shortBio: "Managing the world's most complex digital supply chains, Yuvaraj ensures every Fraylon solution is delivered with surgical precision.",
         fullBio: [
             "Yuvaraj is the Chief Operating Officer, responsible for the global delivery engine that powers Fraylon's multi-million dollar projects. He oversees the logistics of Fraylon’s 24/7 support and deployment centers worldwide.",
             "He pioneered the 'Agile MNC' framework, allowing a global organization like Fraylon to maintain the speed of a startup while delivering the stability required for enterprise-scale operations.",
             "Under his stewardship, Fraylon has achieved the highest certification standards in global delivery reliability and information security."
         ],
-        image: "",
+        image: yuvarajImg,
         linkedIn: "https://linkedin.com"
     },
     {
@@ -110,6 +101,7 @@ export const globalLeadership: Leader[] = [
         role: "Chief Communications Officer",
         tag: "GLOBAL OPERATIONS",
         location: "Brand & Public Relations",
+        imagePosition: "50% 0%",
         shortBio: "Nikhil crafts the global Fraylon story, ensuring our mission of architectural excellence resonates across every language and culture.",
         fullBio: [
             "Nikhil leads Fraylon’s global brand architecture and public relations. He is the principal architect of the Fraylon 'Neural Network' brand campaign, which reached over 1 billion people worldwide.",
