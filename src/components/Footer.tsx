@@ -38,6 +38,7 @@ const Footer = () => {
                         <p><a href="tel:+17048281085">+1 (704) 828-1085</a></p>
                         <p><a href="tel:+919381617904">+91 93816 17904</a></p>
                     </div>
+
                 </div>
 
                 <div className="footer-nav-col">

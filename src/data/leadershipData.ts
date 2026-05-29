@@ -1,6 +1,4 @@
 import ramTejaImg from '../assets/images/ram.png';
-import vigneswarImg from '../assets/images/vigneswar-nalluri.jpg';
-import lavanyaImg from '../assets/images/lavanya.webp';
 import yuvarajImg from '../assets/images/yuvaraj.webp';
 
 export interface Leader {
@@ -43,7 +41,7 @@ export const executiveCouncil: Leader[] = [
         slug: "vigneswar-nalluri",
         name: "Vigneswar Nalluri",
         role: "Chief Technology Officer",
-        image: vigneswarImg,
+        image: "/vigneswar.png",
         tag: "EXECUTIVE COUNCIL",
         location: "Tech Center of Excellence",
         shortBio: "Architecting the world’s most resilient enterprise systems, Vigneswar oversees Fraylon’s multi-billion dollar R&D roadmap with a focus on human-centric AI.",
@@ -73,10 +71,27 @@ export const globalLeadership: Leader[] = [
             "With a background in international economics and crisis management, she is instrumental in Fraylon's ability to maintain continuity and growth in highly volatile geopolitical environments.",
             "She currently chairs the Fraylon Diversity Board, focusing on building high-performance cross-cultural teams that reflect the diversity of the global markets Fraylon serves."
         ],
-        image: lavanyaImg,
+        image: "/Lavanya.png",
         linkedIn: "https://linkedin.com"
     },
-
+    {
+        id: "co-president",
+        slug: "mahitha-bathula",
+        name: "Mahitha Bathula",
+        role: "Co-President",
+        image: "/Mahitha.jpeg",
+        tag: "GLOBAL OPERATIONS",
+        location: "Global HQ",
+        imagePosition: "50% 0%",
+        shortBio: "Co-leading Fraylon’s global network, Mahitha focuses on strategic growth, enterprise operations, and delivering unparalleled value to our international partners.",
+        fullBio: [
+            "As Co-President, Mahitha Bathula works alongside the CEO to steer Fraylon's strategic initiatives and oversee global operations. She brings a wealth of expertise in enterprise scalability and structural alignment.",
+            "Under her leadership, Fraylon has strengthened its presence across emerging markets and solidified its operational frameworks to support rapid technological advancement.",
+            "She is deeply committed to sustainable growth and fostering a culture of innovation across all tiers of the organization."
+        ],
+        linkedIn: "https://linkedin.com",
+        contact: "mahitha.b@fraylon.global"
+    },
     {
         id: "coo",
         slug: "yuvaraj-dudukuru",
@@ -84,7 +99,7 @@ export const globalLeadership: Leader[] = [
         role: "Chief Operating Officer",
         tag: "GLOBAL OPERATIONS",
         location: "Supply Chain & Delivery",
-        imagePosition: "50% 0%",
+        imagePosition: "50% 50%",
         shortBio: "Managing the world's most complex digital supply chains, Yuvaraj ensures every Fraylon solution is delivered with surgical precision.",
         fullBio: [
             "Yuvaraj is the Chief Operating Officer, responsible for the global delivery engine that powers Fraylon's multi-million dollar projects. He oversees the logistics of Fraylon’s 24/7 support and deployment centers worldwide.",
@@ -98,7 +113,7 @@ export const globalLeadership: Leader[] = [
         id: "cmo",
         slug: "nikhil-balaji-nandhagiri",
         name: "Nikhil Balaji Nandhagiri",
-        role: "Chief Communications Officer",
+        role: "Chief Marketing Officer",
         tag: "GLOBAL OPERATIONS",
         location: "Brand & Public Relations",
         imagePosition: "50% 0%",
@@ -108,7 +123,7 @@ export const globalLeadership: Leader[] = [
             "His expertise is in reputation management and high-impact digital storytelling, ensuring that Fraylon's complex technical achievements are translated into meaningful human experiences.",
             "Nikhil serves on the board of the Global Digital Council, focusing on the future of corporate transparency and brand ethics in the age of generative media."
         ],
-        image: "/nikhil_balaji.jpg",
+        image: "/Nikhil.png?v=2",
         linkedIn: "https://linkedin.com"
     }
 ];

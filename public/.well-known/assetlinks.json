@@ -1,0 +1,12 @@
+[
+{
+"relation": ["delegate_permission/common.handle_all_urls"],
+"target": {
+"namespace": "android_app",
+"package_name": "com.fraylon.tech",
+"sha256_cert_fingerprints": [
+"8E:68:4E:7E:32:7F:26:C4:B4:1A:32:AB:3F:EC:F0:B1:98:4D:0E:7A:19:92:B1:8D:04:CB:F8:85:62:DA:6A:3C"
+]
+}
+}
+]
