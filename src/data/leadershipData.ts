@@ -58,41 +58,6 @@ export const executiveCouncil: Leader[] = [
 
 export const globalLeadership: Leader[] = [
     {
-        id: "president",
-        slug: "lavanya-bojja",
-        name: "Lavanya Bojja",
-        role: "President, Global Markets",
-        tag: "GLOBAL OPERATIONS",
-        location: "EMEA & Americas",
-        imagePosition: "50% 0%",
-        shortBio: "Specializing in institutional scale and market diversification, Lavanya ensures Fraylon’s divisions operate at the peak of global performance.",
-        fullBio: [
-            "Lavanya serves as the President of Global Markets, where she is responsible for Fraylon's operational P&L across the EMEA and Americas regions. She manages a portfolio of over 200 high-impact enterprise accounts.",
-            "With a background in international economics and crisis management, she is instrumental in Fraylon's ability to maintain continuity and growth in highly volatile geopolitical environments.",
-            "She currently chairs the Fraylon Diversity Board, focusing on building high-performance cross-cultural teams that reflect the diversity of the global markets Fraylon serves."
-        ],
-        image: "/Lavanya.png",
-        linkedIn: "https://linkedin.com"
-    },
-    {
-        id: "co-president",
-        slug: "mahitha-bathula",
-        name: "Mahitha Bathula",
-        role: "Co-President",
-        image: "/Mahitha.jpeg",
-        tag: "GLOBAL OPERATIONS",
-        location: "Global HQ",
-        imagePosition: "50% 0%",
-        shortBio: "Co-leading Fraylon’s global network, Mahitha focuses on strategic growth, enterprise operations, and delivering unparalleled value to our international partners.",
-        fullBio: [
-            "As Co-President, Mahitha Bathula works alongside the CEO to steer Fraylon's strategic initiatives and oversee global operations. She brings a wealth of expertise in enterprise scalability and structural alignment.",
-            "Under her leadership, Fraylon has strengthened its presence across emerging markets and solidified its operational frameworks to support rapid technological advancement.",
-            "She is deeply committed to sustainable growth and fostering a culture of innovation across all tiers of the organization."
-        ],
-        linkedIn: "https://linkedin.com",
-        contact: "mahitha.b@fraylon.global"
-    },
-    {
         id: "coo",
         slug: "yuvaraj-dudukuru",
         name: "Yuvaraj Dudukuru",
