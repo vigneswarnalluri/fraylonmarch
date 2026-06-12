@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft } from 'react-icons/fa';
 import { servicesData } from '../data/servicesData';
 import type { Project } from '../data/servicesData';
+import SEO from '../components/SEO';
+import NotFound from './NotFound';
 import './ProjectDetail.css';
 
 interface EnrichedProject extends Project {
@@ -32,22 +34,12 @@ const ProjectDetail = () => {
     }
 
     if (!project) {
-        return (
-            <div className="project-detail">
-                <div className="project-detail-container">
-                    <div style={{ paddingTop: '100px' }}>
-                        <h1>Project Not Found</h1>
-                        <Link to="/projects" className="back-link">
-                            <FaArrowLeft /> Return to Projects
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        );
+        return <NotFound />;
     }
 
     return (
         <div className="project-detail">
+            <SEO title={`${project.title} | Case Study | Fraylon Technologies`} description={project.desc} />
             <div className="project-detail-container">
                 <Link to="/projects" className="back-link" style={{ marginBottom: '40px' }}>
                     <FaArrowLeft /> Back to Projects

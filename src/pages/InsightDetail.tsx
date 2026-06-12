@@ -2,6 +2,8 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaCalendar, FaClock, FaUser, FaArrowRight, FaTwitter, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 import { insightsData } from '../data/insightsData';
+import SEO from '../components/SEO';
+import NotFound from './NotFound';
 import './InsightDetail.css';
 import './Insights.css'; // Import for shared card styles
 
@@ -10,16 +12,12 @@ const InsightDetail = () => {
     const insight = insightsData.find(item => item.id === Number(id));
 
     if (!insight) {
-        return (
-            <div className="container insight-not-found">
-                <h2>Article not found</h2>
-                <Link to="/insights" className="back-link">Back to Insights</Link>
-            </div>
-        );
+        return <NotFound />;
     }
 
     return (
         <div className="insight-detail-page">
+            <SEO title={`${insight.title} | Insights | Fraylon Technologies`} description={insight.excerpt} />
             <div className="insight-hero" style={{ backgroundImage: `url(${insight.image})` }}>
                 <div className="insight-hero-overlay"></div>
                 <div className="container insight-hero-content">

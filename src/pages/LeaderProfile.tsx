@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiLinkedin, FiChevronRight, FiGlobe, FiMapPin } from 'react-icons/fi';
 import { allLeaders } from '../data/leadershipData';
+import SEO from '../components/SEO';
+import NotFound from './NotFound';
 import './LeaderProfile.css';
 
 const LeaderProfile: React.FC = () => {
@@ -14,11 +16,12 @@ const LeaderProfile: React.FC = () => {
     }, [slug]);
 
     if (!leader) {
-        return <Navigate to="/leadership" replace />;
+        return <NotFound />;
     }
 
     return (
         <div className="leader-profile-page">
+            <SEO title={`${leader.name} | ${leader.role} | Fraylon Technologies`} description={leader.shortBio} />
             {/* --- Elite Hero Section (Cinematic Editorial) --- */}
             <section className="profile-hero">
                 <div className="container hero-container">

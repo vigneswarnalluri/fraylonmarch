@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const articles = [
     {
@@ -35,6 +36,7 @@ const articles = [
 const NewsMedia = () => {
     return (
         <div className="page-news" style={{ paddingTop: '120px', paddingBottom: '100px', background: '#f8f9fa' }}>
+            <SEO title="News & Press | Fraylon Updates | Fraylon Technologies" description="Keep up with the latest press releases, company news, and milestones of Fraylon Technologies globally." />
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                     <h1 style={{ fontSize: '3rem', color: '#0f172a' }}>News & Insights</h1>

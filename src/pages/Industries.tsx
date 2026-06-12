@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 import './Industries.css';
 
@@ -18,6 +19,10 @@ const Industries = () => {
             >
                 {industry ? (
                     <div className="industry-detail-container">
+                        <SEO 
+                            title={`${industry.title} | Industry Expertise | Fraylon Technologies`}
+                            description={industry.description}
+                        />
                         {/* Hero Section */}
                         <div className="industry-hero">
                             <Link to="/industries" className="industry-breadcrumbs">← All Industries</Link>
@@ -90,6 +95,10 @@ const Industries = () => {
                 ) : (
                     <>
                         {/* List View */}
+                        <SEO 
+                            title="Industry Expertise & Digital Solutions | Fraylon Technologies"
+                            description="Discover Fraylon's deep sector expertise across financial services, healthcare, logistics, manufacturing, automotive, energy, and telecom."
+                        />
                         <div className="industries-header">
                             <h1 className="industries-title">Industries We Serve</h1>
                             <p className="industries-subtitle">

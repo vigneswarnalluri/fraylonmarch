@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInfoCircle, FaShieldAlt, FaLock, FaChartLine } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './PrivacyPolicy.css';
 
 const PrivacyPolicy = () => {
@@ -55,6 +56,7 @@ const PrivacyPolicy = () => {
 
     return (
         <div className="legal-page" style={{ overflow: 'visible' }}>
+            <SEO title="Privacy Policy | Fraylon Technologies" description="Read the Privacy Policy of Fraylon Technologies to understand how we collect, use, protect, and handle your personal data in compliance with privacy regulations." />
             <div className="container" style={{ overflow: 'visible' }}>
                 <header className="legal-header">
                     <motion.span

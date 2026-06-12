@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiCpu, FiLayers, FiFileText, FiSearch, FiArrowRight, FiActivity, FiBriefcase, FiZap, FiGrid, FiFeather } from 'react-icons/fi';
+import SEO from '../components/SEO';
 import './Sitemap.css';
 
 const Sitemap = () => {
@@ -149,6 +150,7 @@ const Sitemap = () => {
 
     return (
         <div className="sitemap-page">
+            <SEO title="Sitemap | Fraylon Technologies" description="Navigate through Fraylon's digital ecosystem with ease using our complete visual sitemap directory." />
             <div className="sitemap-bg-decoration">
                 <div className="sitemap-circle sitemap-circle-1" />
                 <div className="sitemap-circle sitemap-circle-2" />

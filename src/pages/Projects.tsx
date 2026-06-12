@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaFilter, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { servicesData } from '../data/servicesData';
 import type { ServiceData, Project } from '../data/servicesData';
+import SEO from '../components/SEO';
 import './Projects.css';
 
 // Define the hierarchy based on the user's request
@@ -150,6 +151,7 @@ const Projects = () => {
 
     return (
         <div className="projects-page">
+            <SEO title="Our Work & Case Studies | Fraylon Technologies" description="Explore client stories and successful case studies in custom software development, cloud computing, enterprise databases, mobile apps, and AI solutions from Fraylon." />
             <section className="projects-hero condensed">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}

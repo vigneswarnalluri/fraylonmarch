@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { insightsData } from '../data/insightsData';
+import SEO from '../components/SEO';
 import './Insights.css';
 
 const Insights = () => {
@@ -21,6 +22,7 @@ const Insights = () => {
 
     return (
         <div className="insights-page container">
+            <SEO title="Insights & Thought Leadership | Fraylon Technologies" description="Explore Fraylon's latest research, perspectives, and analysis on technology and business strategy trends shaping the future of global industries." />
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

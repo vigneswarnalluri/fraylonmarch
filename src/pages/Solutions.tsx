@@ -6,6 +6,7 @@ import { FaArrowRight, FaQuoteLeft, FaCertificate, FaPlay, FaExclamationCircle, 
 import { VscAzure } from 'react-icons/vsc';
 import { SiAmazonwebservices, SiGooglecloud, SiTerraform, SiKubernetes, SiPrometheus, SiDatadog, SiSnowflake, SiDatabricks, SiDbt, SiApacheairflow, SiApachekafka, SiLooker, SiPython, SiPytorch, SiTensorflow, SiHuggingface, SiOpencv, SiNvidia, SiSap, SiOracle, SiTableau, SiCisco, SiAnsible, SiSplunk, SiPaloaltonetworks, SiWireshark, SiFortinet, SiArgo, SiUipath } from 'react-icons/si';
 import sentineloneLogo from '../assets/sentinelone.png';
+import SEO from '../components/SEO';
 import './Solutions.css';
 
 import { solutionsData } from '../data/solutionsData'; // Import data
@@ -129,6 +130,10 @@ const Solutions = () => {
     return (
         solution ? (
             <div className="solutions-page container">
+                <SEO 
+                    title={`${solution.title} | Solutions | Fraylon Technologies`}
+                    description={solution.description}
+                />
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -425,6 +430,10 @@ const Solutions = () => {
         ) : (
             /* List View */
             <>
+                <SEO 
+                    title="Enterprise Solutions & Consulting | Fraylon Technologies"
+                    description="Explore Fraylon's enterprise-grade cloud transformations, analytics pipelines, cyber security frameworks, automation, SAP S/4HANA, and Oracle integrations."
+                />
                 <div className="solutions-header">
                     <h1 className="page-title">Services & Solutions</h1>
                     <p className="page-subtitle">

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowRight, FiLinkedin, FiSearch, FiFilter } from 'react-icons/fi';
 import { executiveCouncil, globalLeadership } from '../data/leadershipData';
 import DomeGallery from '../components/DomeGallery';
+import SEO from '../components/SEO';
 import './Leadership.css';
 
 const familyInsights = [
@@ -32,6 +33,7 @@ const familyInsights = [
 const Leadership = () => {
     return (
         <div className="leadership-page">
+            <SEO title="Leadership Team | Fraylon Technologies" description="Meet the leadership team at Fraylon Technologies. Learn about our directors, advisors, and senior managers driving technical and strategic excellence across international hubs." />
             {/* --- Corporate Hero --- */}
             <section className="corporate-hero">
                 <div className="container">

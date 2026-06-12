@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 import { FiArrowUpRight } from 'react-icons/fi';
+import SEO from '../components/SEO';
 import './Contact.css';
 
 const Contact = () => {
@@ -40,6 +41,7 @@ const Contact = () => {
     if (isSubmitted) {
         return (
             <div className="contact-page">
+                <SEO title="Message Received | Contact Us | Fraylon Technologies" noindex={true} />
                 <section className="form-success-immersive">
                     <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
                         <FaCheckCircle className="success-giant-icon" />
@@ -54,6 +56,7 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
+            <SEO title="Contact Us | Get a Quote | Fraylon Technologies" description="Get in touch with Fraylon Technologies. Request a consultation, inquire about project development, or get in touch with our strategic hubs." />
             {/* 1. Cinematic Hero */}
             <section className="contact-hero">
                 <div className="hero-visual-bg"></div>

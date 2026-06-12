@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGlobeAmericas, FaLightbulb, FaHeart, FaRocket, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './Careers.css';
 
 const Careers = () => {
@@ -29,6 +30,7 @@ const Careers = () => {
 
     return (
         <div className="careers-page container">
+            <SEO title="Careers | Join the Fraylon Team | Fraylon Technologies" description="Explore career opportunities at Fraylon Technologies. Join a team of visionaries, builders, and strategists working on next-generation digital transformation and AI." />
             {/* Hero Section */}
             <motion.div
                 className="careers-hero"

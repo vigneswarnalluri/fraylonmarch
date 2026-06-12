@@ -6,6 +6,7 @@ import {
     SiSnowflake, SiDatabricks, SiAtlassian,
     SiSlack, SiHubspot, SiFigma, SiVercel
 } from 'react-icons/si';
+import SEO from '../components/SEO';
 import './Partners.css';
 
 const Partners = () => {
@@ -30,6 +31,7 @@ const Partners = () => {
 
     return (
         <div className="partners-page">
+            <SEO title="Strategic Partners | Fraylon Ecosystem | Fraylon Technologies" description="Discover Fraylon's strategic partners and integrations across cloud, databases, and workflow systems including Microsoft Azure, AWS, Google Cloud, Salesforce, and SAP." />
             <div className="container">
                 {/* Hero Section */}
                 <div className="partners-hero">

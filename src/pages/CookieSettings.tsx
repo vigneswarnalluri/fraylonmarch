@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiCheck, FiShield, FiActivity, FiTarget, FiLock } from 'react-icons/fi';
 import Cookies from 'js-cookie';
+import SEO from '../components/SEO';
 import './CookieSettings.css';
 
 const CookieSettings = () => {
@@ -45,6 +46,7 @@ const CookieSettings = () => {
 
     return (
         <div className="legal-page cookie-settings-page">
+            <SEO title="Cookie Settings | Fraylon Technologies" noindex={true} />
             {/* Success Toast */}
             <AnimatePresence>
                 {showSaved && (

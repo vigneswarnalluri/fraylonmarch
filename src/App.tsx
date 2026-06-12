@@ -177,6 +177,7 @@ function App() {
                 <Route path="/services/social-media" element={<SocialMediaPage />} />
                 <Route path="/services/mvp-development" element={<MvpPage />} />
                 <Route path="/services/prototyping" element={<PrototypingPage />} />
+                <Route path="/services" element={<ServiceDetail />} />
                 <Route path="/services/:id" element={<ServiceDetail />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/work/:id" element={<ProjectDetail />} />

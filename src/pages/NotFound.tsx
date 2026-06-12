@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import './NotFound.css';
 
 const NotFound = () => {
     return (
         <div className="notfound-container">
+            <SEO title="Page Not Found | Fraylon Technologies" noindex={true} />
             <motion.div
                 className="notfound-content"
                 initial={{ opacity: 0, y: 20 }}

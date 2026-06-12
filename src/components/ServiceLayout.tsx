@@ -7,6 +7,7 @@ import { SiKubernetes, SiGo, SiPostgresql, SiNextdotjs, SiTailwindcss, SiTypescr
 
 import '../pages/ServiceDetail.css';
 import type { ServiceData } from '../data/servicesData';
+import SEO from './SEO';
 
 // Map for feature icons
 const iconMap: Record<string, ReactNode> = {
@@ -110,6 +111,10 @@ const ServiceLayout = ({ data }: { data: ServiceData }) => {
 
     return (
         <div className="service-page">
+            <SEO 
+                title={`${data.title} | Services | Fraylon Technologies`}
+                description={data.subtitle}
+            />
             {/* HERO SECTION */}
             <section className="service-hero">
                 <motion.div

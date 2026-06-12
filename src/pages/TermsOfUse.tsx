@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import { FaExclamationCircle, FaGlobe, FaBriefcase, FaBalanceScale } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './TermsOfUse.css';
 
 const TermsOfUse = () => {
@@ -54,6 +55,7 @@ const TermsOfUse = () => {
 
     return (
         <div className="legal-page" style={{ overflow: 'visible' }}>
+            <SEO title="Terms of Use | Fraylon Technologies" description="Read the Terms of Use governing the access and use of Fraylon Technologies website and digital assets." />
             <div className="container" style={{ overflow: 'visible' }}>
                 <header className="legal-header">
                     <motion.span
