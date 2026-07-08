@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiCheck, FiShield, FiActivity, FiTarget, FiLock } from 'react-icons/fi';
 import Cookies from 'js-cookie';
@@ -6,22 +6,22 @@ import SEO from '../components/SEO';
 import './CookieSettings.css';
 
 const CookieSettings = () => {
-    const [analytics, setAnalytics] = useState(false);
-    const [marketing, setMarketing] = useState(false);
-    const [showSaved, setShowSaved] = useState(false);
-
-    useEffect(() => {
+    const getInitialConsent = (type: 'analytics' | 'marketing') => {
         const storedConsent = Cookies.get('cookieConsent');
         if (storedConsent) {
             try {
                 const parsed = JSON.parse(storedConsent);
-                setAnalytics(!!parsed.analytics);
-                setMarketing(!!parsed.marketing);
+                return !!parsed[type];
             } catch (e) {
                 console.error('Error parsing cookie preferences', e);
             }
         }
-    }, []);
+        return false;
+    };
+
+    const [analytics, setAnalytics] = useState(() => getInitialConsent('analytics'));
+    const [marketing, setMarketing] = useState(() => getInitialConsent('marketing'));
+    const [showSaved, setShowSaved] = useState(false);
 
     const saveToCookies = (prefs: { necessary: boolean, analytics: boolean, marketing: boolean }) => {
         Cookies.set('cookieConsent', JSON.stringify(prefs), { expires: 365, secure: true, sameSite: 'Strict' });

@@ -38,6 +38,7 @@ const Industries = lazy(() => import('./pages/Industries'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const WorkspacePrivacy = lazy(() => import('./pages/WorkspacePrivacy'));
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 const CookieSettings = lazy(() => import('./pages/CookieSettings'));
@@ -94,6 +95,7 @@ function App() {
       '/industries': 'Industry Expertise | Fraylon Technologies',
       '/projects': 'Our Work | Case Studies | Fraylon',
       '/privacy-policy': 'Privacy Policy | Fraylon Technologies',
+      '/workspace-privacy': 'Privacy Policy | Fraylon Technologies LLP',
       '/terms-of-use': 'Terms of Use | Fraylon Technologies',
       '/sitemap': 'Sitemap | Fraylon Technologies',
       '/cookie-settings': 'Cookie Settings | Fraylon Technologies'
@@ -184,6 +186,7 @@ function App() {
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/ind/:type" element={<Industries />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/workspace-privacy" element={<WorkspacePrivacy />} />
                 <Route path="/terms-of-use" element={<TermsOfUse />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/cookie-settings" element={<CookieSettings />} />

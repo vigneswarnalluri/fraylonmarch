@@ -79,7 +79,6 @@ const CookieConsent: React.FC = () => {
         window.removeEventListener('cookieConsentUpdated', handleUpdate);
       };
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleAcceptAll = () => {

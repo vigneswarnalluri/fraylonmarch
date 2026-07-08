@@ -4,23 +4,22 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInfoCircle, FaShieldAlt, FaLock,
 import SEO from '../components/SEO';
 import './PrivacyPolicy.css';
 
+const sections = [
+    { id: 'intro', title: '1. Introduction' },
+    { id: 'data-collection', title: '2. Information We Collect' },
+    { id: 'data-usage', title: '3. How We Use Your Data' },
+    { id: 'protection', title: '4. Data Protection & Security' },
+    { id: 'rights', title: '5. Your Rights' },
+    { id: 'contact', title: '6. Contact Us' }
+];
+
 const PrivacyPolicy = () => {
     const [activeSection, setActiveSection] = useState('intro');
     const observer = useRef<IntersectionObserver | null>(null);
 
-    const sections = [
-        { id: 'intro', title: '1. Introduction' },
-        { id: 'data-collection', title: '2. Information We Collect' },
-        { id: 'data-usage', title: '3. How We Use Your Data' },
-        { id: 'protection', title: '4. Data Protection & Security' },
-        { id: 'rights', title: '5. Your Rights' },
-        { id: 'contact', title: '6. Contact Us' }
-    ];
-
     useEffect(() => {
-        // More standard observer options for section highlighting
         const observerOptions = {
-            rootMargin: '-10% 0px -60% 0px', // Captures when section is roughly in the top part of the viewport
+            rootMargin: '-10% 0px -60% 0px',
             threshold: 0
         };
 

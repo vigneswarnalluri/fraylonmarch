@@ -4,17 +4,17 @@ import { FaExclamationCircle, FaGlobe, FaBriefcase, FaBalanceScale } from 'react
 import SEO from '../components/SEO';
 import './TermsOfUse.css';
 
+const sections = [
+    { id: 'acceptance', title: '1. Acceptance of Terms' },
+    { id: 'intellectual-property', title: '2. Intellectual Property' },
+    { id: 'license', title: '3. Use License' },
+    { id: 'liability', title: '4. Limitations of Liability' },
+    { id: 'governing-law', title: '5. Governing Law' }
+];
+
 const TermsOfUse = () => {
     const [activeSection, setActiveSection] = useState('acceptance');
     const observer = useRef<IntersectionObserver | null>(null);
-
-    const sections = [
-        { id: 'acceptance', title: '1. Acceptance of Terms' },
-        { id: 'intellectual-property', title: '2. Intellectual Property' },
-        { id: 'license', title: '3. Use License' },
-        { id: 'liability', title: '4. Limitations of Liability' },
-        { id: 'governing-law', title: '5. Governing Law' }
-    ];
 
     useEffect(() => {
         // Use IntersectionObserver for more reliable scroll spy
