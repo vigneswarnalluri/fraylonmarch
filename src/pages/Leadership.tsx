@@ -89,45 +89,47 @@ const Leadership = () => {
             </section>
 
             {/* --- Global Operations Leadership --- */}
-            <section className="operations-section">
-                <div className="container">
-                    <div className="section-title-box">
-                        <span className="line-tag">GLOBAL OPERATIONS</span>
-                    </div>
-                    <div className="operations-grid">
-                        {globalLeadership.map((member, i) => (
-                            <motion.div 
-                                key={member.name}
-                                className="leader-profile-row"
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1, duration: 0.6 }}
-                            >
-                                {member.image && (
-                                    <div className="leader-row-avatar">
-                                        <img src={member.image} alt={member.name} style={{ objectPosition: member.imagePosition || 'top center' }} />
+            {globalLeadership.length > 0 && (
+                <section className="operations-section">
+                    <div className="container">
+                        <div className="section-title-box">
+                            <span className="line-tag">GLOBAL OPERATIONS</span>
+                        </div>
+                        <div className="operations-grid">
+                            {globalLeadership.map((member, i) => (
+                                <motion.div 
+                                    key={member.name}
+                                    className="leader-profile-row"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1, duration: 0.6 }}
+                                >
+                                    {member.image && (
+                                        <div className="leader-row-avatar">
+                                            <img src={member.image} alt={member.name} style={{ objectPosition: member.imagePosition || 'top center' }} />
+                                        </div>
+                                    )}
+                                    <div className="row-content">
+                                        <div className="row-header">
+                                            <span className="role">{member.role}</span>
+                                            <Link to={`/leadership/${member.slug}`} className="name-link">
+                                                <h4>{member.name}</h4>
+                                            </Link>
+                                        </div>
+                                        <p>{member.shortBio}</p>
                                     </div>
-                                )}
-                                <div className="row-content">
-                                    <div className="row-header">
-                                        <span className="role">{member.role}</span>
-                                        <Link to={`/leadership/${member.slug}`} className="name-link">
-                                            <h4>{member.name}</h4>
+                                    <div className="row-action">
+                                        <Link to={`/leadership/${member.slug}`} className="row-arrow">
+                                            <FiLinkedin className="ln-icon" />
                                         </Link>
                                     </div>
-                                    <p>{member.shortBio}</p>
-                                </div>
-                                <div className="row-action">
-                                    <Link to={`/leadership/${member.slug}`} className="row-arrow">
-                                        <FiLinkedin className="ln-icon" />
-                                    </Link>
-                                </div>
-                            </motion.div>
-                        ))}
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            )}
 
             {/* --- Leadership Gallery --- */}
             <section className="leadership-gallery-section" style={{ height: '1000px', backgroundColor: '#ffffff', position: 'relative' }}>

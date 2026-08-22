@@ -1,5 +1,4 @@
 import ramTejaImg from '../assets/images/ram.png';
-import yuvarajImg from '../assets/images/yuvaraj.webp';
 
 export interface Leader {
     id: string;
@@ -56,41 +55,7 @@ export const executiveCouncil: Leader[] = [
     }
 ];
 
-export const globalLeadership: Leader[] = [
-    {
-        id: "coo",
-        slug: "yuvaraj-dudukuru",
-        name: "Yuvaraj Dudukuru",
-        role: "Chief Operating Officer",
-        tag: "GLOBAL OPERATIONS",
-        location: "Supply Chain & Delivery",
-        imagePosition: "50% 50%",
-        shortBio: "Managing the world's most complex digital supply chains, Yuvaraj ensures every Fraylon solution is delivered with surgical precision.",
-        fullBio: [
-            "Yuvaraj is the Chief Operating Officer, responsible for the global delivery engine that powers Fraylon's multi-million dollar projects. He oversees the logistics of Fraylon’s 24/7 support and deployment centers worldwide.",
-            "He pioneered the 'Agile MNC' framework, allowing a global organization like Fraylon to maintain the speed of a startup while delivering the stability required for enterprise-scale operations.",
-            "Under his stewardship, Fraylon has achieved the highest certification standards in global delivery reliability and information security."
-        ],
-        image: yuvarajImg,
-        linkedIn: "https://linkedin.com"
-    },
-    {
-        id: "cmo",
-        slug: "nikhil-balaji-nandhagiri",
-        name: "Nikhil Balaji Nandhagiri",
-        role: "Chief Marketing Officer",
-        tag: "GLOBAL OPERATIONS",
-        location: "Brand & Public Relations",
-        imagePosition: "50% 0%",
-        shortBio: "Nikhil crafts the global Fraylon story, ensuring our mission of architectural excellence resonates across every language and culture.",
-        fullBio: [
-            "Nikhil leads Fraylon’s global brand architecture and public relations. He is the principal architect of the Fraylon 'Neural Network' brand campaign, which reached over 1 billion people worldwide.",
-            "His expertise is in reputation management and high-impact digital storytelling, ensuring that Fraylon's complex technical achievements are translated into meaningful human experiences.",
-            "Nikhil serves on the board of the Global Digital Council, focusing on the future of corporate transparency and brand ethics in the age of generative media."
-        ],
-        image: "/Nikhil.png?v=2",
-        linkedIn: "https://linkedin.com"
-    }
-];
+export const globalLeadership: Leader[] = [];
 
 export const allLeaders = [...executiveCouncil, ...globalLeadership];
+
