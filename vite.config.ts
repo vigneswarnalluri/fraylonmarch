@@ -16,11 +16,15 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/verify/, '/'),
       },
-      '/api/verify': {
+      '/login': {
         target: 'http://localhost:3000',
         changeOrigin: true,
       },
-      '/api/download': {
+      '/admin': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+      '/api': {
         target: 'http://localhost:3000',
         changeOrigin: true,
       },

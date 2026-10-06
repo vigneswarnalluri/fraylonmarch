@@ -1,8 +1,10 @@
-# Certificate Verification Proxy
+# Certificate Verification & Admin Proxy
 /c/* https://verify.fraylontech.com/c/:splat 200
 /verify https://verify.fraylontech.com/ 200
-/api/verify/* https://verify.fraylontech.com/api/verify/:splat 200
-/api/download/* https://verify.fraylontech.com/api/download/:splat 200
+/login https://verify.fraylontech.com/login 200
+/admin/* https://verify.fraylontech.com/admin/:splat 200
+/admin https://verify.fraylontech.com/admin 200
+/api/* https://verify.fraylontech.com/api/:splat 200
 /_next/* https://verify.fraylontech.com/_next/:splat 200
 
 # SPA Fallback
