@@ -42,6 +42,7 @@ const WorkspacePrivacy = lazy(() => import('./pages/WorkspacePrivacy'));
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 const CookieSettings = lazy(() => import('./pages/CookieSettings'));
+const CertificateVerifyProxy = lazy(() => import('./pages/CertificateVerifyProxy'));
 
 
 // Lazy Loaded Service Pages
@@ -98,13 +99,17 @@ function App() {
       '/workspace-privacy': 'Privacy Policy | Fraylon Technologies LLP',
       '/terms-of-use': 'Terms of Use | Fraylon Technologies',
       '/sitemap': 'Sitemap | Fraylon Technologies',
-      '/cookie-settings': 'Cookie Settings | Fraylon Technologies'
+      '/cookie-settings': 'Cookie Settings | Fraylon Technologies',
+      '/verify': 'Certificate Verification | Fraylon Technologies'
     };
 
     // Handle dynamic routes
     let title = routeTitles[location.pathname] || 'Fraylon Technologies';
 
-    if (location.pathname.startsWith('/services/')) {
+    if (location.pathname.startsWith('/c/')) {
+      const certId = location.pathname.split('/').pop()?.toUpperCase();
+      title = `Verify ${certId} | Fraylon Technologies`;
+    } else if (location.pathname.startsWith('/services/')) {
       const service = location.pathname.split('/').pop()?.replace('-', ' ');
       title = `${service?.toUpperCase()} Services | Fraylon`;
     } else if (location.pathname.startsWith('/solutions/')) {
@@ -190,6 +195,8 @@ function App() {
                 <Route path="/terms-of-use" element={<TermsOfUse />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/cookie-settings" element={<CookieSettings />} />
+                <Route path="/c/:certNumber" element={<CertificateVerifyProxy />} />
+                <Route path="/verify" element={<CertificateVerifyProxy />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

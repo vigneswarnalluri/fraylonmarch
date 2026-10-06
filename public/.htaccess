@@ -1,3 +1,18 @@
+# Proxy Certificate Verification
+<IfModule mod_proxy.c>
+  SSLProxyEngine On
+  ProxyPass /c/ https://verify.fraylontech.com/c/
+  ProxyPassReverse /c/ https://verify.fraylontech.com/c/
+  ProxyPass /verify https://verify.fraylontech.com/
+  ProxyPassReverse /verify https://verify.fraylontech.com/
+  ProxyPass /api/verify/ https://verify.fraylontech.com/api/verify/
+  ProxyPassReverse /api/verify/ https://verify.fraylontech.com/api/verify/
+  ProxyPass /api/download/ https://verify.fraylontech.com/api/download/
+  ProxyPassReverse /api/download/ https://verify.fraylontech.com/api/download/
+  ProxyPass /_next/ https://verify.fraylontech.com/_next/
+  ProxyPassReverse /_next/ https://verify.fraylontech.com/_next/
+</IfModule>
+
 # SPA Fallback for React Router
 <IfModule mod_rewrite.c>
   RewriteEngine On
